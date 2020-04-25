@@ -1,0 +1,17 @@
+{
+  "name": "Tool",
+  "2D": true,
+  "3D": true,
+  "platform": "HTML",
+  "version": "2.10",
+  "wabVersion": "2.10",
+  "author": "yuanjy",
+  "description": "",
+  "copyright": "",
+  "license": "",
+  "properties": {
+    "hasConfig": false,
+    "inPanel": false,
+    "hasVersionManager": false
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>你好</title>
+</head>
+
+<body>
+    <input type="file" id="aa" value="打开">
+
+    <script language="javascript">
+        var fileid = document.getElementById("aa");
+
+        fileid.onchange = function ab() {
+            var file = this.files[0]; //获取文件
+            var reader = new FileReader();
+
+            var datas;
+            reader.readAsText(file, "gb2");
+            reader.onload = function () {
+                datas = reader.result.split('\n');
+                console.log(datas);
+                console.log(datas[0])
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Test",
+  "2D": true,
+  "3D": true,
+  "platform": "HTML",
+  "version": "2.10",
+  "wabVersion": "2.10",
+  "author": "",
+  "description": "",
+  "copyright": "",
+  "license": "",
+  "properties": {
+    "hasConfig": false,
+    "hasVersionManager": false
+  }
+}

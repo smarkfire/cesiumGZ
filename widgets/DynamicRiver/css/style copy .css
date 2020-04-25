@@ -1,0 +1,165 @@
+@import "Tooltip-div.css";
+
+.jimu-widget-DynamicRiver {
+	display: none;
+	width: 100%;
+	height: auto;
+	/* overflow-x: hidden; */
+	font-size: 14px;
+	color: rgb(238, 235, 235);
+	background-color: rgba(48, 48, 48, 0.7);
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-main {
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 5px;
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-header {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	border-bottom: 1px solid rgb(69, 154, 251);
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-header i {
+	display: inline-block;
+	margin-left: 6px;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: url(../../../images/toolbox.png ) no-repeat 0 -20px;
+	background-size: 20px;
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-header .close-dynamicriver {
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	font-size: 38px;
+	font-weight: 400;
+	height: 28px;
+	line-height: 28px;
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+
+.jimu-widget-DynamicRiver .water-analysis {
+	margin: 10px 8px;
+}
+
+.jimu-widget-DynamicRiver .water-analysis ul,
+.jimu-widget-DynamicRiver .water-analysis ul li {
+	margin: 0;
+	padding: 0;
+}
+
+.jimu-widget-DynamicRiver .water-analysis ul {
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.jimu-widget-DynamicRiver .water-analysis ul li {
+	list-style: none;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+}
+
+.jimu-widget-DynamicRiver .water-analysis ul li span.content-left {
+	float: left;
+	padding-left: 10px;
+	height: 100%;
+	width: 80%;
+	text-align: left;
+
+}
+
+.jimu-widget-DynamicRiver .water-analysis ul li span.content-right {
+	float: left;
+	height: 100%;
+	width: 20%;
+	background: url(../../../images/dynamicRiver-see.png) no-repeat;
+	background-position: 50%;
+	background-size: 50%;
+	border-left: 1px solid #fff;
+}
+
+
+.jimu-widget-DynamicRiver .dynamicriver-result div,
+.jimu-widget-DynamicRiver .dynamicriver-result ul,
+.jimu-widget-DynamicRiver .dynamicriver-result li {
+	margin: 0;
+	padding: 0;
+}
+
+
+.jimu-widget-DynamicRiver .dynamicriver-result {
+	display: none;
+	position: absolute;
+	top: 260px;
+	right: 10px;
+	width: 220px;
+	height: auto;
+	background-color: rgba(48, 48, 48, 0.7);
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 6px;
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-result > div {
+	position: relative;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: left;
+	border-bottom: 1px solid rgb(69, 154, 251);
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-result div .close-dynamicriver-result {
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	font-size: 30px;
+	font-weight: 400;
+	height: 28px;
+	line-height: 28px;
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-result ul {
+	margin: 10px;
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-radius: 6px;
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-result ul li {
+	list-style: none;
+	display: flex;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #fff;
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-result ul li:last-child {
+	border-radius: 6px;
+}
+
+
+.jimu-widget-DynamicRiver .dynamicriver-result ul li span:first-child {
+	flex: 1;
+	border-right: 1px solid #fff;
+	text-align: center;
+}
+
+.jimu-widget-DynamicRiver .dynamicriver-result ul li span:last-child {
+	flex: 2;
+	padding-left: 8px;
+}

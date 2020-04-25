@@ -1,0 +1,15 @@
+{
+  "name": "HomeButton",
+  "platform": "HTML",
+  "version": "2.10",
+  "wabVersion": "2.10",
+  "description": "",
+  "copyright": "",
+  "license": "",
+  "properties": {
+    "inPanel": false,
+    "hasUIFile": false,
+    "hasConfig": false,
+    "supportMultiInstance": false
+  }
+}

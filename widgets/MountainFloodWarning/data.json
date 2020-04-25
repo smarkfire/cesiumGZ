@@ -1,0 +1,25 @@
+{
+    "code": 200,
+    "success": true,
+    "data": [{
+        "List": {
+            "elevation": "179.33",
+            "dj": "114.5144",
+            "origin": "635.2",
+            "villagegroup": "小窖子",
+            "waterline": "180.79",
+            "stationcode": "62306550",
+            "waterid": "233",
+            "rivername": "寺下河",
+            "bw": "25.9759",
+            "district": "上犹县",
+            "station": "安和水文站",
+            "TM": "2020-03-30 18:45:00",
+            "Z": 250.590,
+            "village": "安和村",
+            "township": "安和乡"
+        },
+        "yjsw": 156.3
+    }],
+    "msg": "操作成功"
+}

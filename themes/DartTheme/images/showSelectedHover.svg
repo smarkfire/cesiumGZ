@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="9px" viewBox="0 0 16 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>show selected_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="filter" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="select-component" transform="translate(-364.000000, -833.000000)" fill="#FFFFFF">
+            <path d="M366.082049,834.694534 L368.218028,833 L369,833.652733 L366.082049,836 L364,834.305466 L364.781972,833.652733 L366.082049,834.694534 Z M371,834 L380,834 L380,836 L371,836 L371,834 Z M366.082049,840.259378 L368.218028,838 L369,838.870311 L366.082049,842 L364,839.740622 L364.781972,838.870311 L366.082049,840.259378 Z M371,839 L380,839 L380,841 L371,841 L371,839 Z" id="show-selected_white"></path>
+        </g>
+    </g>
+</svg>

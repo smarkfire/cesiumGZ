@@ -1,0 +1,92 @@
+.jimu-widget-Rolling{
+  width: 100%;
+  height: 320px;
+  /* background-color: #323a36; */
+  background-color: #3c464b;
+  font-size: 14px;
+  /* border: 1px solid rgb(69, 154, 251); */
+  color: rgb(238, 235, 235);
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.rollinng-table-hezi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.hezi-left-select {
+  line-height: 50px;
+}
+
+.hezi-leftspan, .hezi-rightspan {
+  font-size: 14px;
+  color: #fff;
+  margin-right: 7px;
+}
+
+.hezi-select {
+  background-color: #404853;
+  color: #fff;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.hezi-select:hover {
+  background-color: #ccc;
+  color: #3c464b;
+}
+
+.rollinng-table-hezi-xx {
+  font-size: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.rollinng-table-hezi-xx:hover {
+  cursor: pointer;
+  color: red;
+}
+
+#slider {
+  position: absolute;
+  left: -135%;
+  top: 0px;
+  background-color: #D3D3D3;
+  width: 3px;
+  height: 100%;
+  z-index: 9999;
+}
+
+#slider:hover {
+  cursor: ew-resize;
+}
+
+.hiddenHeZi {
+  position: relative;
+  width: 100%;
+  height: 1730%;
+  top: -200%;
+  z-index: -999;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
