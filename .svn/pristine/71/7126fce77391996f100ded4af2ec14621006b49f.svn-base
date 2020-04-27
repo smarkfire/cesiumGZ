@@ -1,0 +1,14 @@
+<div>
+	<div class="layer-management">
+		<div class="bar-item menu-switch" id="menu_switch" data-type="7">
+			<i></i>
+			<span>图层<span>
+		</div>
+		<div class="ztree-demo-background" id="ztree_container">
+			<div class="layer-tag-bar">
+				<img src="./images/menu.png" alt=""> <span>图层</span> <i id="close_tag_bar">×</i>
+			</div>
+			<ul id="treeDemo" class="ztree"></ul>
+		</div>
+	</div>
+</div>

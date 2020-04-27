@@ -1,0 +1,173 @@
+.jimu-widget-ComprehensiveSupervise {
+    position: fixed !important;
+    top: 45px !important;
+    left: 0 !important;
+    bottom: 25px !important;
+    width: 80px !important;
+    height: auto !important;
+    background: rgb(0, 73, 135);
+    z-index: 43 !important;
+    color: #fff;
+    opacity: 0.9;
+}
+
+/* 公共样式 */
+.jimu-widget-ComprehensiveSupervise div,
+.jimu-widget-ComprehensiveSupervise ul,
+.jimu-widget-ComprehensiveSupervise li,
+.jimu-widget-ComprehensiveSupervise img {
+    margin: 0;
+    padding: 0;
+}
+
+.jimu-widget-ComprehensiveSupervise li {
+    list-style: none;
+  
+}
+
+/* 菜单栏样式 */
+.jimu-widget-ComprehensiveSupervise .supervise-meau {
+    height: 100%;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-meau ul li {
+    height: 80px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+/* 径向渐变 */
+.jimu-widget-ComprehensiveSupervise .supervise-meau ul li.on {
+    background: -webkit-radial-gradient(50% 50%, closest-side, blue, white);
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-meau ul li a {
+    position: relative;
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    text-align: center;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-meau ul li a img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    width: 26px;
+    height: 26px;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-meau ul li span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 48%);
+    font-size: 16px;
+}
+
+
+/* 链接二维码样式 */
+.jimu-widget-ComprehensiveSupervise .supervise-meau .link-address {
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+}
+
+/* 内容展示区域样式 */
+.jimu-widget-ComprehensiveSupervise .supervise-content {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    bottom: 0;
+    width: 360px;
+    height: auto;
+    background: #fff;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-content .video {
+    opacity: 1;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+}
+
+/* 存放容器 */
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+/* 小图片 */
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list li {
+    position: relative;
+    float: left;
+    margin: 0px 2%;
+    margin-top: 6px;
+    width: 46%;
+    height: 100px;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list li img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list li span {
+    display: block;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #000;
+}
+
+
+/* 播放按钮 */
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list li div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list li div i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
+
+.jimu-widget-ComprehensiveSupervise .supervise-content .video .video-list li div i img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 14px;
+    height: 14px;
+
+}

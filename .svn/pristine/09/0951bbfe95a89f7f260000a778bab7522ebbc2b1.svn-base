@@ -1,0 +1,151 @@
+.jimu-widget-Tool {
+  position: relative;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;   /* 240px */
+  background: rgba(44, 46, 46, 0.75);
+  color: #fff;
+  border-right: 1px solid #000;
+  border-radius: 6px 0 0 6px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10 !important;
+}
+
+.jimu-widget-Tool .tool-bar {
+  width: 100%;
+}
+
+.jimu-widget-Tool .tool-bar .tool-btn i {
+  display: inline-block;
+  width: 16px;
+  height: 16px; 
+  background: url(../../../images/toolback.png) no-repeat;
+  background-size: 16px;
+  vertical-align: middle;
+}
+
+.jimu-widget-Tool .tool-bar .tool-btn span:hover {
+  text-decoration: underline;
+}
+
+.jimu-widget-Tool .tool-bar .tool-btn del {
+  display: inline-block;
+  width: 10px;
+  height: 6px;
+  background: url(../../../images/toolbottom.png) no-repeat;
+  background-size: 10px 6px;
+  /* vertical-align: / */
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box {
+  display: none;
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 110px;
+  /* height: 505px; */
+  height: 38px;
+}
+.jimu-widget-Tool .tool-bar .tool-y-box ul,
+.jimu-widget-Tool .tool-bar .tool-y-box li {
+  margin: 0;
+  padding: 0;
+}
+.jimu-widget-Tool .tool-bar .tool-y-box ul {
+  height: 100%;
+}
+.jimu-widget-Tool .tool-bar .tool-y-box li {
+  list-style: none;
+  margin: 0px 4px;
+  height: 34px;
+  line-height: 34px;
+  width: 102px;
+  background: rgba(95, 94, 94, .5);
+} 
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:hover {
+  background: rgb(5, 42, 90);
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li i {
+  margin-top: -2px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: 100%;
+  vertical-align: middle;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(1) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 0;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(2) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -141px;
+}
+
+
+/* .jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(2) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -16px;
+} */
+
+
+/* .jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(1) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 0;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(2) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -16px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(3) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -32px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(4) i {
+  height: 15px;
+  background: url(../../../images/toolbox.png ) no-repeat 0 -48px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(5) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -64px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(6) i {
+  height: 14px;
+  background: url(../../../images/toolbox.png ) no-repeat 0 -79px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(7) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -93px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(8) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -111px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(9) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -126px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(10) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -141px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(11) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -157px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(12) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -173px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(13) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -188px;
+}
+
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(14) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -204px;
+} */

@@ -1,0 +1,27 @@
+<div>
+	<div class="analysis-header">
+		<i></i> 堰塞湖分析
+	</div>
+	<div class="dong">
+		<ul>
+			<li><span>分析区域:</span><input id="dong_draw" type="button" value="绘制区域"></li>
+			<li><span>最低海拔(米):</span><input type="text" id="dong_min_height"></li>
+			<li><span>最高海拔(米):</span><input type="text" id="dong_max_height"></li>
+			<li><span>淹没速度(米/秒):</span><input type="text" id='dong_time' value='0.5'></li>
+			<li><input id='dong_start' type="button" value="开始分析"><input id='dong_delet' type="button" value="清除"></li>
+		</ul>
+	</div>
+	<p>what why no sea</p>
+	<div class="dong-echarts" id='dong_echarts'>
+		
+	</div>
+	<div class='dong-progress'>
+		<h2>分析结果中，请稍等...</h2>
+		<span class="container">
+			<span id="progress_bar"  class="h-100P bar"></span>
+		</span>
+	</div>
+	<div class="storage-capacity-curve" id="storage_echarts">
+	</div>
+	<span class='storage-name'>库容(10<sup>8</sup>m³)</span>
+</div>

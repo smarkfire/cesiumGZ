@@ -1,0 +1,206 @@
+{
+	"data": [{
+			"name": "赣州水位站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302750&action=jpg",
+			"localurl": "./images/sp_action_GZ.jpg",
+			"longitude": 114.958567,
+			"latitude": 25.855993
+		}, {
+			"name": "赣州坝上水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62305550&action=jpg",
+			"localurl": "./images/sp_action_BS.jpg",
+			"longitude": 114.943746,
+			"latitude": 25.813461
+		},
+		{
+			"name": "会昌筠门岭水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302800&action=jpg",
+			"localurl": "./images/sp_action_XML.jpg",
+			"longitude": 115.748375,
+			"latitude": 25.238404
+		},
+		{
+			"name": "于都汾坑水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62303500&action=jpg",
+			"localurl": "./images/sp_action_FK.jpg",
+			"longitude": 115.665833,
+			"latitude": 26.127241
+		},
+		{
+			"name": "会昌麻州水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302850&action=jpg",
+			"localurl": "./images/sp_action_MZ.jpg",
+			"longitude": 115.783220,
+			"latitude": 25.514913
+		},
+		{
+			"name": "瑞金市水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302350&action=jpg",
+			"localurl": "./images/sp_action_RJ.jpg",
+			"longitude": 116.036191,
+			"latitude": 25.867595
+		},
+		{
+			"name": "会昌葫芦阁水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302550&action=jpg",
+			"localurl": "./images/sp_action_HLG.jpg",
+			"longitude": 115.626020,
+			"latitude": 25.756572
+		},
+		{
+			"name": "花桥",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302553&action=jpg",
+			"localurl": "./images/sp_action_HQ.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "公馆",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302651&action=jpg",
+			"localurl": "./images/sp_action_GG.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "胜利",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302652&action=jpg",
+			"localurl": "./images/sp_action_SL.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "坪石",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302654&action=jpg",
+			"localurl": "./images/sp_action_PS.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "固厚",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62303360&action=jpg",
+			"localurl": "./images/sp_action_GH.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "于都县车溪水位站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62303502&action=jpg",
+			"localurl": "./images/sp_action_CX.jpg",
+			"longitude": 115.578035,
+			"latitude": 26.031148
+		},
+		{
+			"name": "石城水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62303650&action=jpg",
+			"localurl": "./images/sp_action_SC.jpg",
+			"longitude": 116.360825,
+			"latitude": 26.361685
+		},
+		{
+			"name": "兴国县水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62304100&action=jpg",
+			"localurl": "./images/sp_action_XG.jpg",
+			"longitude": 115.371012,
+			"latitude": 26.336901
+		},
+		{
+			"name": "窑下坝(二)水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62305350&action=jpg",
+			"localurl": "./images/sp_action_YXB.jpg",
+			"longitude": 114.752433,
+			"latitude": 25.657499
+		},
+		{
+			"name": "田头水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62306100&action=jpg",
+			"localurl": "./images/sp_action_TT.jpg",
+			"longitude": 114.646861,
+			"latitude": 25.793317
+		},
+		{
+			"name": "崇义水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62306250&action=jpg",
+			"localurl": "./images/sp_action_CY.jpg",
+			"longitude": 114.300838,
+			"latitude": 25.708801
+		},
+		{
+			"name": "横市",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62306580&action=jpg",
+			"localurl": "./images/sp_action_HS.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "陂头",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62325720&action=jpg",
+			"localurl": "./images/sp_action_PT.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "朱坊",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62327890&action=jpg",
+			"localurl": "./images/sp_action_ZF.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "寻乌水背水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=81100100&action=jpg",
+			"localurl": "./images/sp_action_SB.jpg",
+			"longitude": 115.677479,
+			"latitude": 24.799251
+		},
+		{
+			"name": "定南胜前水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=81101450&action=jpg",
+			"localurl": "./images/sp_action_SQ.jpg",
+			"longitude": 115.197465,
+			"latitude": 24.867087
+		},
+		{
+			"name": "上犹安和水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62306550&action=jpg",
+			"localurl": "./images/sp_action_AH.jpg",
+			"longitude": 114.513911,
+			"latitude": 25.977936
+		},
+		
+		{
+			"name": "信丰水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62304700&action=jpg",
+			"localurl": "./images/sp_action_XF.jpg",
+			"longitude": 114.928262,
+			"latitude": 25.355790
+		},
+		{
+			"name": "杜头",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62304850&action=jpg",
+			"localurl": "./images/sp_action_DT.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "唐江水文站",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62306120&action=jpg",
+			"localurl": "./images/sp_action_TJ.jpg",
+			"longitude": 114.7393577,
+			"latitude": 25.7987094
+		},
+		{
+			"name": "南迳",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62304500&action=jpg",
+			"localurl": "./images/sp_action_NJ.jpg",
+			"longitude": "",
+			"latitude": ""
+		},
+		{
+			"name": "里仁",
+			"monitor": "http://sw797.com:803/new/sp_action.php?STCD=62302653&action=jpg",
+			"localurl": "./images/sp_action_LR.jpg",
+			"longitude": "",
+			"latitude": ""
+		}
+	]
+}

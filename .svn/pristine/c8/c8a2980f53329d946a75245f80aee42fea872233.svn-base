@@ -1,0 +1,13 @@
+.demo-widgets-HeatMap {
+    position: absolute;
+    top: 8px;
+    right: auto;
+    left: 95px;
+    bottom: auto;
+    width: 31px;
+    height: 31px;
+    background-color: #303336;
+    border-radius: 8px;
+
+    text-align: center;
+}

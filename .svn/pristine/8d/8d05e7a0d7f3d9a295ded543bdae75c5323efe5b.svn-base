@@ -1,0 +1,313 @@
+.jimu-widget-HydrologicalRiskArea {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fff;
+}
+
+.jimu-widget-HydrologicalRiskArea ul,
+.jimu-widget-HydrologicalRiskArea li,
+.jimu-widget-HydrologicalRiskArea div,
+.jimu-widget-HydrologicalRiskArea input,
+.jimu-widget-HydrologicalRiskArea img,
+.jimu-widget-HydrologicalRiskArea table,
+.jimu-widget-HydrologicalRiskArea tr,
+.jimu-widget-HydrologicalRiskArea td,
+.jimu-widget-HydrologicalRiskArea th,
+.jimu-widget-HydrologicalRiskArea tbody,
+.jimu-widget-HydrologicalRiskArea thead{
+    margin: 0;
+    padding: 0;
+}
+
+.jimu-widget-HydrologicalRiskArea a {
+    text-decoration: none;
+    color: black;
+}
+
+.jimu-widget-HydrologicalRiskArea a:hover {
+    text-decoration: none;
+    color: #336699;
+}
+
+.jimu-widget-HydrologicalRiskArea #Hyd_tab {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    /*margin: 1px 3px 1px 3px;*/
+    /*z-index: 9;*/
+}
+
+.jimu-widget-HydrologicalRiskArea #Hyd_tab .tabul {
+    height: 30px;
+    line-height: 30px;
+}
+
+.jimu-widget-HydrologicalRiskArea #Hyd_tab ul {
+    list-style: none;
+    line-height: 30px;
+    height: 30px;
+}
+
+.jimu-widget-HydrologicalRiskArea #Hyd_tab .tabul ul li {
+    cursor: pointer;
+    float: left;
+    list-style: none;
+    text-align: center;
+    padding: 0px 5px;
+    margin-right: 4px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background: rgb(187, 186, 186);
+    border-radius: 4px;
+    color: #fff;
+}
+
+.jimu-widget-HydrologicalRiskArea #Hyd_tab ul li.on {
+    /*border-top: 2px solid Saddlebrown;*/
+    background: #094895;
+}
+
+.jimu-widget-HydrologicalRiskArea #Hyd_tab div {
+    /*width: 100%;*/
+    line-height: 24px;
+    /*border-top: none;*/
+    /*border: 1px solid #336699;*/
+}
+
+.jimu-widget-HydrologicalRiskArea .hide {
+    display: none;
+}
+
+.jimu-widget-HydrologicalRiskArea .fxq-box-list {
+    /*margin-left: 1%;*/
+    overflow-y: auto;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    border: 1px #ccc solid;
+}
+
+.jimu-widget-HydrologicalRiskArea .load-box-list {
+    display: none;
+    overflow-y: auto;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    border: 1px #ccc solid;
+}
+
+.jimu-widget-HydrologicalRiskArea .load-box-list .rote-load {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 80px;
+}
+
+.jimu-widget-HydrologicalRiskArea .load-box-list .rote-load img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    animation: rote 3s linear infinite;
+}
+
+.jimu-widget-HydrologicalRiskArea .load-box-list .rote-load span {
+    margin: 0 !important;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    line-height: 20px !important;
+    text-align: center;
+}
+
+@keyframes rote {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.jimu-widget-HydrologicalRiskArea #floodPage .fxq-box-list,
+.jimu-widget-HydrologicalRiskArea #floodPage .load-box-list {
+    /*margin-left: 1%;*/
+    height: auto;
+    max-height: 91.5%;
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 84px;
+    bottom: 0px;
+}
+
+.jimu-widget-HydrologicalRiskArea #mountainPage .fxq-box-list,
+.jimu-widget-HydrologicalRiskArea #mountainPage .load-box-list {
+    /*margin-left: 1%;*/
+    height: auto;
+    max-height: 91.5%;
+    overflow-y: auto;
+    background-color: #fff;
+    position: absolute;
+    top: 84px;
+    bottom: 0px;
+}
+
+
+.jimu-widget-HydrologicalRiskArea #mountainPage .first_top {
+    margin-top: 10px;
+    height: 32px;
+    width: 100%;
+    padding-top: 1.5px;
+    background-color: #fff;
+    border: 1px solid #d2d2d0;
+}
+.jimu-widget-HydrologicalRiskArea #floodPage .first_top {
+    margin-top: 10px;
+    height: 32px;
+    width: 100%;
+    padding-top: 1.5px;
+    background-color: #fff;
+    border: 1px solid #d2d2d0;
+}
+
+.jimu-widget-HydrologicalRiskArea #mountainPage span {
+    margin-left: 6px;
+    font-size: 14px;
+}
+
+.jimu-widget-HydrologicalRiskArea #mountainPage .zd_inp {
+    height: 26px;
+    width: 65px;
+    border: 1px solid rgba(160, 160, 156, 1);
+    vertical-align: top;
+}
+
+.jimu-widget-HydrologicalRiskArea #mountainPage .zd_quy {
+    height: 26px;
+    width: 54px;
+    border: none;
+    margin-left: 5px;
+}
+
+.jimu-widget-HydrologicalRiskArea #floodPage span {
+    float: left;
+    margin-left: 6px;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.jimu-widget-HydrologicalRiskArea #floodPage .zd_inp {
+    height: 26px;
+    width: 65px;
+    border: 1px solid rgba(160, 160, 156, 1);
+    vertical-align: top;
+}
+
+.jimu-widget-HydrologicalRiskArea #floodPage .zd_quy {
+    height: 26px;
+    width: 54px;
+    border: none;
+    margin-left: 5px;
+}
+
+.jimu-widget-HydrologicalRiskArea #floodPage .select,
+.jimu-widget-HydrologicalRiskArea #thirdPage .select {
+    width: 70px !important;
+    min-width: 70px !important;
+}
+
+
+.jimu-widget-HydrologicalRiskArea .wicon {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAASAgMAAAA1aVZ3AAAACVBMVEUAAAD///9nyrNdI4MmAAAAAXRSTlMAQObYZgAAAChJREFUCNdjWAUCCxjg9DQgtTKBAUN8aigQJGCho6KiYDSJ8ggaYR8Ao74zAKjm+cYAAAAASUVORK5CYII=");
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.jimu-widget-HydrologicalRiskArea .workinput {
+    width: 120px;
+    line-height: 20px;
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    padding: 4px;
+    background-color: #fff;
+    float: left;
+    margin: 2px 0px;
+    font-size: 14px;
+}
+
+.jimu-widget-HydrologicalRiskArea .select {
+    position: relative;
+    width: 88px;
+    min-width: 88px;
+    height: 26px;
+    border: 1px solid rgba(160, 160, 156, 1);
+    cursor: pointer;
+    float: left;
+    /*right: 10px;*/
+    /*margin-top: -6px;*/
+}
+
+.jimu-widget-HydrologicalRiskArea .select:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -2px;
+    border-top: 5px solid #666;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.jimu-widget-HydrologicalRiskArea #swfx-tab1-grid th,
+.jimu-widget-HydrologicalRiskArea #swfx-tab1-grid td,
+.jimu-widget-HydrologicalRiskArea #swfx-tab2-grid th,
+.jimu-widget-HydrologicalRiskArea #swfx-tab2-grid td,
+.jimu-widget-HydrologicalRiskArea #swfx-tab3-grid th,
+.jimu-widget-HydrologicalRiskArea #swfx-tab3-grid td {
+    text-align: center;
+}
+
+.jimu-widget-HydrologicalRiskArea #swfx-tab1-grid .field-Q {
+    width: 81px;
+}
+
+.jimu-widget-HydrologicalRiskArea #swfx-tab1-grid .field-STNM {
+    width: 81px;
+}
+
+.jimu-widget-HydrologicalRiskArea #swfx-tab3-grid .field-STNM {
+    /* width: 102px; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* .jimu-widget-HydrologicalRiskArea #swfx-tab1-grid .field-TM {
+  width: 100px;
+} */

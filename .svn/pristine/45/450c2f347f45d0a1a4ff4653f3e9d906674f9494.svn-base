@@ -1,0 +1,8 @@
+$(function () {
+    laydate.render({
+        elem: '#timestart', //指定元素
+    });
+    laydate.render({
+        elem: '#inpstart' //指定元素
+    });
+})

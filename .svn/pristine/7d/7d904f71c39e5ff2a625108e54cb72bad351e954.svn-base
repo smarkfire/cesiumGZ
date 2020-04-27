@@ -1,0 +1,104 @@
+<div>
+    <div class="hydronetwork">
+        <div class="hydroworktab">
+            <ul>
+                <li class="on">重要水文站</li>
+                <li>易淹没区</li>
+                <li>水位站</li>
+                <li>水文站</li>
+                <li>雨量站</li>
+                <li>中小河流站</li>
+            </ul>
+        </div>
+        <div class="hydroworklist">
+            <div id="hydroWorkOne">
+                <div class="net-work-query">
+                    <input type="text" placeholder="关键字查询">
+                    <input type="button" class="net-work-search" value="查询">
+                </div>
+                <div class="location-box-list" id="swzw-tab1-grid" data-dojo-attach-point="swzw-tab1-grid">
+                </div>
+                <div class="net-work-loadbox">
+					<div class="net-work-roteload">
+						<img src="./images/rote.jpg" alt="">
+						<span>正在加载</span>
+					</div>
+				</div>
+            </div>
+            <div id="hydroWorkTwo" class="hide">
+                <div class="net-work-query">
+                    <input type="text" placeholder="关键字查询">
+                    <input type="button" class="net-work-search" value="查询">
+                </div>
+                <div class="location-box-list" id="swzw-tab2-grid" data-dojo-attach-point="swzw-tab2-grid">
+                </div>
+                <div class="net-work-loadbox">
+					<div class="net-work-roteload">
+						<img src="./images/rote.jpg" alt="">
+						<span>正在加载</span>
+					</div>
+				</div>
+            </div>
+            <div id="hydroWorkThree" class="hide">
+                <div class="net-work-query">
+                    <input type="text" placeholder="关键字查询">
+                    <input type="button" class="net-work-search" value="查询">
+                </div>
+                <div class="location-box-list" id="swzw-tab3-grid" data-dojo-attach-point="swzw-tab3-grid">
+                </div>
+                <div class="m-style Pagination" id="swzw_swez"></div>
+                <div class="net-work-loadbox">
+					<div class="net-work-roteload">
+						<img src="./images/rote.jpg" alt="">
+						<span>正在加载</span>
+					</div>
+				</div>
+            </div>
+            <div id="hydroWorkFour" class="hide">
+                <div class="net-work-query">
+                    <input type="text" placeholder="关键字查询">
+                    <input type="button" class="net-work-search" value="查询">
+                </div>
+                <div class="location-box-list" id="swzw-tab4-grid" data-dojo-attach-point="swzw-tab4-grid">
+                </div>
+                <div class="m-style Pagination" id="swzw_swz"></div>
+                <div class="net-work-loadbox">
+					<div class="net-work-roteload">
+						<img src="./images/rote.jpg" alt="">
+						<span>正在加载</span>
+					</div>
+				</div>
+            </div>
+            <div id="hydroWorkFive" class="hide">
+                <div class="net-work-query">
+                    <input type="text" placeholder="关键字查询">
+                    <input type="button" class="net-work-search" value="查询">
+                </div>
+                <div class="location-box-list" id="swzw-tab5-grid" data-dojo-attach-point="swzw-tab5-grid">
+                </div>
+                <div class="m-style Pagination" id="swzw_yl"></div>
+                <div class="net-work-loadbox">
+					<div class="net-work-roteload">
+						<img src="./images/rote.jpg" alt="">
+						<span>正在加载</span>
+					</div>
+				</div>
+            </div>
+            <div id="hydroWorkSix" class="hide">
+                <div class="net-work-query">
+                    <input type="text" placeholder="关键字查询">
+                     <input type="button" class="net-work-search" value="查询">
+                </div>
+                <div class="location-box-list" id="swzw-tab6-grid" data-dojo-attach-point="swzw-tab6-grid">
+                </div>
+                <div class="m-style Pagination" id="swzw_zxhl"></div>
+                <div class="net-work-loadbox">
+					<div class="net-work-roteload">
+						<img src="./images/rote.jpg" alt="">
+						<span>正在加载</span>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>

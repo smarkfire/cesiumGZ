@@ -1,0 +1,81 @@
+<div id="sign_table">
+    <div class="sign-head">
+        <div class="sign-head-th">
+            <i class="sign-head-th-pic"></i>
+            <span class="sign-head-th-biaoji">我的标记</span>
+            <span class="sign-head-th-xx">×</span>
+        </div>
+        <div class="sign-head-td">
+            <ul class="sign-head-td-ul">
+                <li class="sign-head-td-ul-border addPic addTianjia" title="添加注记">
+                    <img src="./images/tj.png" alt="">
+                </li>
+                <li class="sign-head-td-ul-hengxian">|</li>
+                <li class="sign-head-td-ul-border dakai" id="dkwj" title="打开文件">
+                    <input type="file" class="file" id="fileDKWJ" />
+                    <img src="./images/dk.png" alt="">
+                </li>
+                <li class="sign-head-td-ul-border dakai" id="djwj" title="叠加文件">
+                    <input type="file" class="file" id="fileDJWJ">
+                    <img src="./images/dakaiwenjian.png" alt="">
+                </li>
+                <li class="sign-head-td-ul-border" id="bcwj" title="保存文件">
+                    <img src="./images/cwj.png" alt="">
+                </li>
+                <li class="sign-head-td-ul-hengxian">|</li>
+                <li class="sign-head-td-ul-border" id="qkbj" title="清空标记">
+                    <img src="./images/shanchu.png" alt="">
+                </li>
+                <li class="sign-head-td-ul-border" id="suo" title="是否编辑">
+                    <img id="jiesuo" src="./images/jiesuo.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="sign-content">
+        <div class="sign-content-mc">
+            <div class="sign-content-mc-hezi">
+                <span>名称</span>
+                <!-- <img class="topPic" src="../../images/sign/-shanglajiantou.png" alt="">
+                <img class="bottomPic" src="../../images/sign/-xialajiantou.png" alt=""> -->
+            </div>
+            <div class="caozuo">操作</div>
+        </div>
+        <div class="sign-content-my">没有找到匹配的记录</div>
+        <!-- <div class="11">
+            <input type="text" value="我的标记" class="wdbj-text">
+            <img class="wdbj-shanchu" src="../../images/sign/shanchu.png" alt="">
+        </div> -->
+        <div class="sign-content-kb"></div>
+    </div>
+    <!-- 单击完成绘制 -->
+    <div class="danji">单击完成绘制</div>
+    <!-- 添加标记 -->
+    <div class="sign-tian">
+        <div class="sign-tian-thead">
+            <span>添加标记</span>
+            <span class="sign-tian-xxx">×</span>
+        </div>
+        <div class="sign-tian-tbody">
+            <div class="sign-tian-hang">
+                <div>名称</div>
+                <input class="sign_im_text sign-tian-hang-input" type="text" placeholder="请输入标记名称">
+            </div>
+            <div class="sign-tian-hang qsrbz">
+                <div>备注</div>
+                <textarea class="sign-tian-hang-textarea" placeholder="请输入备注 (可选填)"></textarea>
+            </div>
+            <div class="sign-tian-bao">
+                <button class="baocun">保存</button>
+                <button class="shanchu">删除</button>
+            </div>
+        </div>
+        <div class="sanJiaoXing-pic"></div>
+    </div>
+    <!-- 提示文字 -->
+    <div class="tipWenZi">
+        <div class="delWenZi actEdit">单击激活编辑</div>
+        <div class="delWenZi modifyEdit">释放完成修改</div>
+        <div class="delWenZi dragEdit">拖动该点修改位置</div>
+    </div>
+</div>

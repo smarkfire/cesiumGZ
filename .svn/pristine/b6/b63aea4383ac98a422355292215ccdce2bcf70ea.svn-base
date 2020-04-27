@@ -1,0 +1,119 @@
+.jimu-widget-FlyRoute {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	background-color: rgba(48, 48, 48, 0.7);
+	display: none;
+	font-size: 14px;
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 5px;
+	color: rgb(238, 235, 235);
+}
+
+/* 头部 */
+.jimu-widget-FlyRoute .fly-route-header {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	border-bottom: 1px solid rgb(69, 154, 251);
+}
+
+.jimu-widget-FlyRoute .fly-route-header i {
+	display: inline-block;
+	margin-left: 6px;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: url(../../../images/toolbox.png ) no-repeat 0 -176px;
+	background-size: 20px;	
+}
+
+.jimu-widget-FlyRoute .fly-route-header .close-flyrouter {
+	position: absolute;
+	top: 50%;
+	right: 8px;
+	font-size: 38px;
+	font-weight: 400;
+	height: 28px;
+	line-height: 28px;
+	cursor: pointer;
+	transform: translateY(-50%);
+}
+
+
+
+.jimu-widget-FlyRoute input,
+.jimu-widget-FlyRoute select {
+	border: 0;
+}
+
+.jimu-widget-FlyRoute .fly-route-continer {
+	margin: 10px 8px;
+}
+
+/* 选择框，或者说选择飞行路线 */
+.jimu-widget-FlyRoute .fly-route-control #flightRoute {
+	width: 100%;
+	height: 30px;
+}
+
+/* 控制按钮 */
+.jimu-widget-FlyRoute .fly-route-continer .fly-route-control-btn,
+.jimu-widget-FlyRoute .fly-route-continer .fly-route-new-btn {
+	margin-top: 10px;
+	width: 100%;
+}
+
+.jimu-widget-FlyRoute .fly-route-continer .fly-route-control-btn input,
+.jimu-widget-FlyRoute .fly-route-continer .fly-route-new-btn input {
+	margin: 0 1%;
+	width: 30%;
+	height: 30px;
+	color: #fff;
+	background: rgb(31, 76, 112);
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 4px;
+}
+
+
+.jimu-widget-FlyRoute .fly-route-continer .fly-route-new {
+	margin-top: 10px;
+}
+
+.jimu-widget-FlyRoute .fly-route-continer .fly-route-new-top {
+	height: 24px;
+	line-height: 24px;
+	font-size: 18px;
+}
+
+
+#passPoint,
+#passPoint li {
+	margin: 0;
+	padding: 0;
+}
+
+#passPoint {
+	margin-top: 10px;
+	height: auto;
+	list-style: none;
+	overflow: auto;
+}
+
+#passPoint li {
+	margin: 10px 40px;
+}
+
+.item {
+	background: #C0C0C0;
+	border-radius: 5px;
+	height: 20px;
+	padding-left: 5px;
+	color: white;
+	font-family: "微软雅黑";
+	text-align: center;
+	margin-bottom: 5px;
+}
+

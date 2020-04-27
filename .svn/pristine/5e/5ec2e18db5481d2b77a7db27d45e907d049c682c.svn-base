@@ -1,0 +1,562 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+}
+
+body {
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+}
+
+ul,
+ol,
+li,
+dl,
+dd,
+dt {
+    list-style-type: none;
+}
+
+select,
+input,
+img,
+select,
+button {
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #323232
+}
+
+a:hover {
+    color: #0262AB;
+}
+
+a:hover,
+a:link {
+    text-decoration: none;
+}
+
+input {
+    outline: none
+}
+
+input[type=button] {
+    cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.river-course {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -242px;
+    width: 798px;
+    height: 480px;
+    border: 1px solid rgb(187, 195, 200);
+    background: #fff;
+}
+
+.river-top {
+    width: 100%;
+    height: 50px;
+    background: rgb(187, 195, 200);
+}
+
+.river-menu,
+.rain-menu,
+.reser-menu {
+    width: 100%;
+    height: 35px;
+}
+
+.river-menu ul li,
+.rain-menu ul li,
+.reser-menu ul li {
+    min-width: 50px;
+    padding: 0 15px;
+    height: 35px;
+    float: left;
+    margin-top: 15px;
+    line-height: 35px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.river-menu ul li:hover,
+.rain-menu ul li:hover,
+.reser-menu ul li:hover {
+    background: #539af6;
+}
+
+.river-menu ul li.on,
+.rain-menu ul li.on,
+.reser-menu ul li.on {
+    background: #fff;
+    color: rgb(187, 195, 200);
+}
+
+.river-box {
+    width: 100%;
+    height: 400px;
+}
+
+.river-one,
+.river-two,
+.river-thr,
+.river-fou {
+    width: 100%;
+    height: 100%;
+}
+
+.river-box-top {
+    height: 45px;
+    width: 100%;
+}
+
+.river-pei {
+    width: 430px;
+    height: 360px;
+    float: left;
+}
+
+.river-tab {
+    width: 360px;
+    height: 360px;
+    float: left;
+}
+
+.river-fou-box {
+    width: 100%;
+}
+
+.river-fou-box ul li {
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 14px;
+}
+
+.river-fou-box ul li span {
+    width: 80px;
+    height: 30px;
+    text-align: right;
+    display: inline-block;
+    float: left;
+}
+
+.river-fou-box ul li div {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #d0d0d0;
+    float: left;
+    padding-left: 10px;
+}
+
+.river-fou-box ul li div.on {
+    border: 1px solid #3892d4;
+}
+
+.table-thead {
+    width: auto;
+    font-size: 12px;
+    background-color: #f0eded;
+    border: 1px solid #CFCFCF;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.table-thead tr th {
+    text-align: left;
+    border-right: 1px solid #CFCFCF;
+    color: #404040;
+}
+
+.table-thead tr th:last-child,
+.table-thead tr th:nth-last-child(2) {
+    border-right: 0;
+}
+
+.table-thead tr th div {
+    padding-left: 3px;
+}
+
+.table-thead tr,
+.table-tbody tr {
+    height: 35px;
+}
+
+.table-tbody {
+    width: auto;
+    font-size: 12px;
+    background-color: #FFF;
+    border-left: 1px solid #CFCFCF;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.table-tbody tr {
+    border-bottom: 1px solid #CFCFCF;
+}
+
+.table-tbody tr:last-child {
+    border-bottom: 0;
+}
+
+.table-tbody tr td {
+    border-right: 1px solid #CFCFCF;
+}
+
+.table-tbody tr td:first-child {
+    text-align: center;
+}
+
+.table-tbody tr td div {
+    padding-left: 3px;
+}
+
+.river-thead tr th:nth-child(1) div {
+    width: 28px;
+}
+
+.river-thead tr th:nth-child(2) div {
+    width: 128px;
+}
+
+.river-thead tr th:nth-child(3) div {
+    width: 80px;
+}
+
+.river-thead tr th:nth-child(4) div {
+    width: 41px;
+}
+
+.river-thead tr th:nth-child(5) div {
+    width: 48px;
+}
+
+.river-thead tr th:nth-child(6) div {
+    width: 17px;
+}
+
+.river-tbody tr td:nth-child(1) div {
+    width: 28px;
+}
+
+.river-tbody tr td:nth-child(2) div {
+    width: 128px;
+}
+
+.river-tbody tr td:nth-child(3) div {
+    width: 80px;
+}
+
+.river-tbody tr td:nth-child(4) div {
+    width: 41px;
+}
+
+.river-tbody tr td:nth-child(5) div {
+    width: 51px;
+}
+
+.comTbody {
+    width: auto;
+    display: inline-block;
+    max-height: 325px;
+    overflow-y: scroll;
+    border-bottom: 1px solid #CFCFCF;
+}
+
+
+
+
+
+/*降雨*/
+.rain-pei {
+    width: 530px;
+    height: 360px;
+    float: left;
+}
+
+.rain-tab {
+    width: 260px;
+    height: 360px;
+    float: left;
+}
+
+.rain-thead tr th:nth-child(1) div {
+    width: 34px;
+}
+
+.rain-thead tr th:nth-child(2) div {
+    width: 110px;
+}
+
+.rain-thead tr th:nth-child(3) div {
+    width: 80px;
+}
+
+.rain-thead tr th:nth-child(4) div {
+    width: 17px;
+}
+
+.rain-tbody tr td:nth-child(1) div {
+    width: 34px;
+}
+
+.rain-tbody tr td:nth-child(2) div {
+    width: 110px;
+}
+
+.rain-tbody tr td:nth-child(3) div {
+    width: 82px;
+}
+
+
+.rain-thead-box tr th {
+    text-align: center;
+}
+
+.rain-thead-box tr th:nth-child(1) div {
+    width: 45px;
+}
+
+.rain-thead-box tr th:nth-child(2) div {
+    width: 150px;
+}
+
+.rain-thead-box tr th:nth-child(3) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(4) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(5) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(6) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(7) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(8) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(9) div {
+    width: 68px;
+}
+
+.rain-thead-box tr th:nth-child(10) div {
+    width: 67px;
+}
+
+.rain-thead-box tr th:nth-child(11) div {
+    width: 17px;
+}
+
+.rain-tbody-box tr td:nth-child(1) div {
+    width: 45px;
+}
+
+.rain-tbody-box tr td:nth-child(2) div {
+    width: 150px;
+}
+
+.rain-tbody-box tr td:nth-child(3) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(4) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(5) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(6) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(7) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(8) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(9) div {
+    width: 68px;
+}
+
+.rain-tbody-box tr td:nth-child(10) div {
+    width: 67px;
+}
+
+.rser-thead tr th {
+    text-align: center;
+}
+
+.rser-thead tr th:nth-child(1) div {
+    width: 35px;
+}
+
+.rser-thead tr th:nth-child(2) div {
+    width: 90px;
+}
+
+.rser-thead tr th:nth-child(3) div {
+    width: 48px;
+}
+
+.rser-thead tr th:nth-child(4) div {
+    width: 17px;
+}
+
+.rser-tbody tr td:nth-child(1) div {
+    width: 35px;
+}
+
+.rser-tbody tr td:nth-child(2) div {
+    width: 90px;
+}
+
+.rser-tbody tr td:nth-child(3) div {
+    width: 48px;
+}
+
+.rese-pei {
+    width: 585px;
+    height: 360px;
+    float: left;
+}
+
+.rese-tab {
+    width: 200px;
+    height: 360px;
+    float: left;
+}
+
+/* 模拟下拉框 */
+.hide {
+    display: none;
+}
+
+.select {
+    width: 200px;
+    position: relative;
+    margin: 10px 0 0 10px;
+    float: left;
+}
+
+.select .input_in input {
+    width: 188px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    padding-left: 10px;
+    color: #6d6d6d;
+    background: url("../img/sel.png")
+        no-repeat 175px;
+}
+
+.select .city {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 10;
+}
+
+.select .city ul {
+    width: 198px;
+    border: 1px solid #d6d6d6;
+    border-top: none;
+}
+
+.select .city ul li {
+    padding-left: 10px;
+    width: 188px;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    background: #fff;
+    color: #404040;
+}
+
+.select .city ul li:hover {
+    background: #539af6;
+    color: #fff;
+}
+
+
+/** 日历代码   **/
+.river-data {
+    float: left;
+    margin-top: 10px;
+}
+
+.datainp {
+    width: 145px;
+    height: 30px;
+    border: 1px solid #d0d0d0;
+    padding-left: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #6d6d6d;
+}
+
+.wicon {
+    background: url("../img/data.png")
+        no-repeat 120px;
+}
+
+.time-icon {
+    background: url("../img/sel.png")
+        no-repeat 128px;
+}
+
+.river-btn {
+    width: 50px;
+    height: 30px;
+    border: 1px solid #d0d0d0;
+    background: #f6f6f6;
+    margin-top: 10px;
+    color: #6d6d6d;
+    float: left;
+}
+
+.none {
+    display: none;
+}

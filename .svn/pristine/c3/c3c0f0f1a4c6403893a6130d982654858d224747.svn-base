@@ -1,0 +1,26 @@
+<div>
+	<div class="thematic-dynamicriver-header">
+		<i></i> 河道模拟
+	</div>
+	<!--<div>
+		<span>请选择水面线：</span><select id="flightRoute"></select>
+	</div>-->
+	<div class="thematic-water-analysis">
+		<ul>
+			<li><span>河流宽度：</span><input id="thematic_hlkd_headtab" type="text" value="200" /></li>
+			<li><span>河流高度：</span><input id="thematic_hlgd_headtab" type="text" value="10" /></li>
+			<li><span>水流速：</span><input id="thematic_sls_headtab" type="text" value="10" /></li>
+			<li><span>水位变化值：</span><input id="thematic_bhz_headtab" type="text" value="10" /></li>
+		</ul>
+		<div class="thematic-water-analysis-new">
+			<div>
+				<input type="button" id="thematic_hzsm_headtab" value="绘制水面线" />
+				<input type="button" id='thematic_qcsmx_headtab' value="清除">
+			</div>
+			<div>
+				<input type="button" id="thematic_smsz_headtab" value="水面上涨" />
+				<input type="button" id="thematic_smxj_headtab" value="水面下降" />
+			</div>
+		</div>
+	</div>
+</div>

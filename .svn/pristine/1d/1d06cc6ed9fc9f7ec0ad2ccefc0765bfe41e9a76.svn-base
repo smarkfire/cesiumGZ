@@ -1,0 +1,79 @@
+
+<div class="form-body form-inline" style="width:100%; height: 100%;">
+    <div style="width:100%; height: 100%;">
+        <div style="width:100%;float:left;">
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >对应站点:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="crainfall" >--</span>
+                </div>
+
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >对应站码:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="cenconding" >--</span>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >备选站点:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="arainfall" >--</span>
+                </div>
+
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >备选站码:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="aconding" >--</span>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >乡镇:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="township" >--</span>
+                </div>
+
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >行政村:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="village" >--</span>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >村小组:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="village_group" >--</span>
+                </div>
+
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >区县:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="county" >--</span>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >东经:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="dj" >--</span>
+                </div>
+
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >北纬:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="bw" >--</span>
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >5年一遇:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="fyear" >--</span>
+                </div>
+
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >20年一遇:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="tyear" >--</span>
+                </div>
+
+            </div>
+            <div class="form-group" style="margin-top: 10px;display: inline-block;width:100%; height: 26px;">
+                <label class="col-md-3 control-label" style="text-align: right; color: rgb(131, 127, 127); line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; width: 90px; "  data-dojo-attach-point="xian"  >100年一遇:</label>
+                <div class="col-md-9" style="color: #666; padding-left: 6px; width: 220px; line-height: 26px; height: 100%;font-weight:normal;float:left; font-size: 14px; margin-left: 10px; border: 1px solid rgb(170, 166, 166); background: rgb(233, 230, 230);" >
+                    <span data-dojo-attach-point="oyear" >--</span>
+                </div>
+            </div>
+        </div>
+    </div></div>

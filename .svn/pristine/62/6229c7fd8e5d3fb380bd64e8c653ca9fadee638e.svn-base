@@ -1,0 +1,128 @@
+///////////////////////////////////////////////////////////////////////////
+// Copyright © 2019 zhongsong. All Rights Reserved.
+// 模块描述：综合监管
+///////////////////////////////////////////////////////////////////////////
+define([
+	'dojo/_base/declare',
+	'dojo/_base/lang',
+	'dojo/_base/array',
+	'dojo/_base/html',
+	'dojo/topic',
+	'jimu/BaseWidget'
+],
+	function (declare,
+		lang,
+		array,
+		html,
+		topic,
+		BaseWidget
+	) {
+		return declare([BaseWidget], {
+			baseClass: 'jimu-widget-ComprehensiveSupervise',
+			name: 'ComprehensiveSupervise',
+			startup: function () {
+				this.inherited(arguments);
+				var that = this;
+				// 保存左侧菜单栏的点击下标
+				var ind = null;
+
+				var cont = $('.jimu-widget-ComprehensiveSupervise .supervise-content');
+				$('.jimu-widget-ComprehensiveSupervise .supervise-meau ul li').click(function () {
+					if ($(this).index == ind) return;
+					$(this).addClass('on').siblings().removeClass('on');
+					if ($(this).index() != 2) {
+						$('.video').stop().hide();
+						$('.videoWindow').stop().hide();
+					}
+					if ($(this).index() == 0) {
+						topic.publish("closeMountain", 'MountainFloodWarning');
+						cont.append($('.jimu-widget-Hydrology').stop().show());
+						$('.jimu-widget-Hydrology .hydro-list-mean .num a').trigger('click');
+					} else if ($(this).index() == 1) {
+						topic.publish("closehydrology", 'Hydrology');
+
+						cont.append($('.jimu-widget-MountainFloodWarning').stop().show());
+						topic.publish("openMountain", 'MountainFloodWarning');
+						
+					} else if ($(this).index() == 2) {
+						topic.publish("closeMountain", 'MountainFloodWarning');
+						topic.publish("closehydrology", 'Hydrology');
+
+						$('.video').stop().show();
+					}
+					ind = $(this).index();
+				})
+
+				$('.video ul li').click(function () {
+					var wid = $(window).width() - 400 + 'px';
+					var hei = $(window).height() - 45 + 'px';
+					$('.videoWindow').stop().show();
+					var url = $(this).children('img').attr('src');
+					var img = $('<img>')[0];
+					img.setAttribute('src', url);
+					console.log(img);
+					parent.layer.open({
+						type: 1,
+						shadeClose: true,
+						shade: false,
+						maxmin: true, //开启最大化最小化按钮
+						area: [wid, hei],
+						offset: ['45px', '400px'],
+						content:  `<img src='${$(this).children('img').attr('src')}' width='100%' height='100%'>`,
+						id: "ComprehensiveSupervise",
+						closeBtn: 1,
+						success: function(layero, index){
+							console.log(layero, index);
+						  }
+					});
+				})
+
+				var linkTips = null;
+				$('#link_tips').mouseover(function () {
+					linkTips = parent.layer.open({
+						type: 4,
+						content: ["<img src='../../images/link-address.png' >", "#link_tips"] //数组第二项即吸附元素选择器或者DOM
+					  }); 
+				})
+
+				$('#link_tips').mouseout(function () {
+					parent.layer.close(linkTips);
+				})
+			},
+
+			onOpen: function () {
+				//面板打开的时候触发 （when open this panel trigger）
+				this.map.camera.flyTo({
+					destination: Cesium.Cartesian3.fromDegrees(115.257787, 25.885506, 549263.35),
+					easingFunction: Cesium.EasingFunction.QUADRACTIC_IN_OUT
+				});
+
+				$('.jimu-widget-ComprehensiveSupervise .supervise-meau ul li:eq(0)').trigger('click');
+			},
+
+			onClose: function () {
+				//面板关闭的时候触发 （when this panel is closed trigger）
+				topic.publish("closehydrology", 'Hydrology');
+				topic.publish("closeMountain", 'MountainFloodWarning');
+			},
+
+			onMinimize: function () {
+				this.resize();
+			},
+
+			onMaximize: function () {
+				this.resize();
+			},
+
+			resize: function () { },
+
+			destroy: function () {
+				//销毁的时候触发
+				//todo
+				//do something before this func
+				this.inherited(arguments);
+			},
+
+
+		});
+	});

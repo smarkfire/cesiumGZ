@@ -1,0 +1,15 @@
+{
+  "name": "AreaSwitch",
+  "2D": true,
+  "3D": true,
+  "platform": "HTML",
+  "version": "2.10",
+  "wabVersion": "2.10",
+  "author": "NarutoGIS",
+  "description": "",
+  "copyright": "",
+  "properties": {
+    "hasConfig": true,
+    "hasVersionManager": false
+  }
+}

@@ -1,0 +1,212 @@
+.jimu-widget-HydroNetWorkDetails {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+
+
+.jimu-widget-HydroNetWorkDetails div,
+.jimu-widget-HydroNetWorkDetails img,
+.jimu-widget-HydroNetWorkDetails p,
+.jimu-widget-HydroNetWorkDetails ul,
+.jimu-widget-HydroNetWorkDetails li,
+.jimu-widget-HydroNetWorkDetails input,
+.jimu-widget-HydroNetWorkDetails iframe {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-details-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 4px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  background: rgb(2,26,63);
+  white-space: normal;
+  border-radius: 8px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-details {
+  display: none;
+  position: fixed;
+  right: 0;
+  bottom: 25px;
+  width: 340px;
+  height: 552px;
+  overflow: hidden;
+  background: #fff;
+  border: 16px solid rgb(2,26,63);
+  border-top: none;
+  opacity: 0.8;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-content {
+  overflow: hidden;
+  position: absolute;
+  top: 36px;
+  bottom: 0px;
+  height: auto;
+}
+
+/* 标题 */
+.jimu-widget-HydroNetWorkDetails .net-work-title {
+  height: 36px;
+  line-height: 36px;
+  font-size: 18px;
+  color: #fff;
+  background: rgb(2,26,63);
+}
+
+/* 关闭按钮容器 */
+.jimu-widget-HydroNetWorkDetails .net-work-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+
+}
+
+/* 关闭按钮 */
+.jimu-widget-HydroNetWorkDetails .net-work-close i {
+  display: block;
+  height: 36px;
+  line-height: 36px;
+  width: 36px;
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* 图片 */
+.jimu-widget-HydroNetWorkDetails .net-work-img img {
+  width: 100%;
+  height: 190px;
+  vertical-align: middle;
+}
+
+/* 站点描述 */
+.jimu-widget-HydroNetWorkDetails div p {
+  padding: 4px 2px;
+  font-size: 12px;
+  letter-spacing:2px;
+  text-indent: 2em;
+  line-height: 20px;
+  height: 100px;
+  background: rgb(2,26,63);
+  overflow-y: auto;
+  color: #fff;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-tab {
+  position: relative;
+  width: 100%;
+  height: 208px;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-tab ul {
+  width: 100%;
+  height: 28px;
+  background: rgb(2,26,63);
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-tab ul li:nth-child(1),
+.jimu-widget-HydroNetWorkDetails .net-work-tab ul li:nth-child(3) {
+  cursor: pointer;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-tab ul li {
+  float: left;
+  width: 49.8%;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+.jimu-widget-HydroNetWorkDetails .net-work-tab ul li.on {
+  color: rgb(243, 183, 54);
+}
+
+
+.jimu-widget-HydroNetWorkDetails .net-work-tab ul li:nth-child(2) {
+  width: 0.4%;
+  height: 28px;
+  background: rgb(134, 134, 134);
+}
+
+
+/* 全景 */
+.jimu-widget-HydroNetWorkDetails .ner-work-panorama {
+  display: none;
+}
+.jimu-widget-HydroNetWorkDetails .ner-work-panorama,
+.jimu-widget-HydroNetWorkDetails .net-work-monitor {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: 190px;
+  line-height: 190px;
+  color: rgb(189, 156, 156);
+  font-size: 18px;
+  text-align: center;
+}
+
+
+.jimu-widget-HydroNetWorkDetails .ner-work-panorama iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  vertical-align: top;
+}
+
+
+
+.jimu-widget-HydroNetWorkDetails .net-work-monitor img  {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+
+
+
+.jimu-widget-HydroNetWorkDetails .ner-work-panorama.on,
+.jimu-widget-HydroNetWorkDetails .net-work-monitor.on {
+  background: rgb(2,26,63);
+}
+
+.jimu-widget-HydroNetWorkDetails .ner-work-panorama i {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 26px;
+  height: 26px;
+  background: rgb(94, 94, 94);
+  border: 4px solid rgb(94, 94, 94);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.jimu-widget-HydroNetWorkDetails .ner-work-panorama i img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}

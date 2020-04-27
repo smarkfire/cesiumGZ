@@ -1,0 +1,316 @@
+.jimu-widget-Sign {
+  width           : 100%;
+  height          : 320px;
+  background-color: #323a36;
+  font-size       : 14px;
+  border          : 1px solid rgb(69, 154, 251);
+  /* opacity      : .8; */
+  color           : rgb(238, 235, 235);
+  font-size       : 16px;
+  display         : none;
+}
+
+#sign_table {
+  position: relative;
+}
+
+
+
+.sign-head {
+  width              : 320px;
+  height             : 90px;
+  /* background-color: red; */
+}
+
+.sign-head-th {
+  display            : flex;
+  justify-content    : space-between;
+  align-items        : center;
+  width              : 320px;
+  height             : 40px;
+  /* background-color: blue; */
+  padding            : 0 10px;
+  border-bottom      : 1px solid #377bc9;
+
+}
+
+.sign-head-th-pic {
+  margin-top: 4px;
+  width     : 20px;
+  height    : 18px;
+  background: url(../../../images/toolbox.png ) no-repeat 0 -63px;
+}
+
+.sign-head-th-biaoji {
+  margin-left: -180px;
+  color      : white;
+}
+
+.sign-head-th-xx {
+  font-size: 30px;
+  cursor   : pointer;
+}
+
+.sign-head-td {
+  margin-top: 5px;
+  overflow  : hidden;
+  height    : 50px;
+}
+
+.sign-head-td-ul {
+  margin         : 0;
+  padding        : 0 10px;
+  list-style     : none;
+  display        : flex;
+  justify-content: start;
+}
+
+.sign-head-td-ul li {
+
+  margin-right: 10px;
+  text-align  : center;
+  padding     : 5px 0 0 0;
+}
+
+.sign-head-td-ul-border {
+  cursor    : pointer;
+  width     : 30px;
+  height    : 30px;
+  margin-top: 6px;
+  border    : 1px solid white;
+}
+
+.dakai {
+  position: relative;
+  cursor  : pointer;
+}
+
+.file {
+  position        : absolute;
+  right           : 0;
+  top             : 0;
+  background-color: red;
+  width           : 30px;
+  height          : 30px;
+  opacity         : 0;
+  cursor          : pointer;
+}
+
+.sign-head-td-ul img {
+  padding-bottom: 5px;
+  width         : 20px;
+  height        : 20px;
+}
+
+.sign-content {
+  width      : 316px;
+  height     : 267px;
+  border     : 1px solid #fff;
+  margin-left: 1px;
+  overflow   : auto;
+}
+
+.sign-content-mc {
+  /* position : absolute; */
+  width       : 315px;
+  height      : 40px;
+  border      : 1px solid #fff;
+  display     : flex;
+  padding-left: 10px;
+}
+
+.sign-content-mc-hezi {
+  width      : 315px;
+  position   : relative;
+  line-height: 40px;
+  cursor     : pointer;
+}
+
+.sign-content-mc-hezi .topPic,
+.bottomPic {
+  cursor    : pointer;
+  right     : 0;
+  position  : absolute;
+  background: url(../../images/sign/-shanglajiantou.png) no-repeat;
+  width     : 15px;
+  height    : 15px;
+}
+
+.sign-content-mc-hezi .bottomPic {
+  top: 17px;
+}
+
+.sign-content-mc-hezi .topPic {
+  top: 10px;
+}
+
+.sign-content-mc .caozuo {
+  width       : 74px;
+  cursor      : pointer;
+  margin-left : 10px;
+  border-left : 1px solid #fff;
+  line-height : 40px;
+  padding-left: 10px;
+}
+
+.sign-content-my {
+  width        : 314px;
+  height       : 40px;
+  line-height  : 40px;
+  text-align   : center;
+  border-bottom: 1px solid #fff;
+}
+
+.wdbj {
+  width              : 100%;
+  /* background-color: red; */
+  height             : 40px;
+  border-bottom      : 1px solid #fff;
+  display            : flex;
+  justify-content    : space-around;
+  align-items        : center;
+}
+
+.wdbj:hover {
+  background-color: #3f4854;
+}
+
+.wdbj .wdbj-text {
+  width           : 248px;
+  line-height     : 37px;
+  border          : none;
+  background-color: #323a36;
+  color           : #fff;
+  padding-left    : 10px;
+  font-size       : 15px;
+  border-right    : 1px solid #fff;
+  cursor          : pointer;
+}
+
+.wdbj .wdbj-text:hover {
+  background-color: #3f4854;
+}
+
+.wdbj-shanchu {
+  line-height  : 40px;
+  padding-right: 10px;
+  height       : 20px;
+}
+
+.danji {
+  padding         : 5px;
+  background-color: #141f18;
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  display         : none;
+  border-radius   : 5px;
+}
+
+.sign-tian {
+  display         : none;
+  position        : fixed;
+  top             : 50px;
+  left            : 20px;
+  width           : 280px;
+  height          : 0px;
+  background-color: red;
+}
+
+.sign-tian-thead {
+  overflow        : hidden;
+  width           : 100%;
+  height          : 40px;
+  background-color: #29434a;
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  padding         : 0 8px;
+  border-bottom   : 1px solid #47605b;
+}
+
+.sign-tian-thead span {
+  font-weight: 500
+}
+
+.sign-tian-thead span:nth-child(2) {
+  font-size: 30px;
+  cursor   : pointer;
+}
+
+.sign-tian-thead span:nth-child(2):hover {
+  color: red;
+}
+
+.sign-tian-tbody {
+  width           : 100%;
+  padding         : 10px;
+  background-color: #434b54;
+}
+
+.sign-tian-hang {
+  width        : 100%;
+  height       : 60px;
+  margin-bottom: 20px;
+}
+
+
+.sign-tian-hang-input {
+  margin-top      : 5px;
+  background-color: #3f4954;
+  line-height     : 25px;
+  width           : 100%;
+  border          : none;
+  color           : #999;
+  padding         : 5px;
+  font-size       : 10px;
+  color           : #fff;
+}
+
+.sign-tian-hang-textarea {
+  margin-top      : 5px;
+  height          : 60px;
+  background-color: #3f4954;
+  font-size       : 13px;
+  color           : #999;
+  padding         : 5px;
+  border          : none;
+  resize          : none;
+  width           : 100%;
+  color           : #fff;
+  font-family     : '黑体';
+}
+
+.sign-tian-bao {
+  border-radius: 5px;
+  padding      : 20px;
+  height       : 30px;
+  text-align   : center;
+  margin       : 10px 0;
+}
+
+.sign-tian-bao .baocun,
+.sign-tian-bao .shanchu {
+  background-color: #385973;
+  color           : #fff;
+  border          : none;
+  line-height     : 25px;
+  border-radius   : 5px;
+}
+
+.sign-tian-bao .shanchu {
+  background-color: #6a525a;
+  margin-left     : 10px;
+}
+
+
+.sanJiaoXing-pic {
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  width       : 0;
+  height      : 0;
+  border-top  : 17px solid #3f4954;
+  border-left : 10px solid transparent;
+  border-right: 10px solid transparent
+}

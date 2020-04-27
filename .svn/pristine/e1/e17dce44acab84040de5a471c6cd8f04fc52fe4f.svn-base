@@ -1,0 +1,5 @@
+.jimu-widget-fullScreen {
+    width: 32px!important;
+    height:32px!important;
+    margin:2px;
+}

@@ -1,0 +1,40 @@
+<div>
+	<input class="net-work-details-btn" type="button" value="详情">
+	<div class="net-work-details">
+		<div class='net-work-close'>
+			<i>
+				×
+			</i>
+		</div>
+		<div class="net-work-title">
+	
+		</div>
+		<div class="net-work-content">
+			<div class="net-work-img">
+			</div>
+			<div>
+				<p>
+	
+				</p>
+			</div>
+			<div class="net-work-tab">
+				<ul>
+					<li class="on">
+						实时监控
+					</li>
+					<li>
+	
+					</li>
+					<li>
+						虚拟体验
+					</li>
+				</ul>
+				<div class="net-work-monitor">
+				</div>
+				<div class="ner-work-panorama">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,119 @@
+.jimu-widget-Layermanagement {
+  position: relative;
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;   /* 240px */
+  background: rgba(44, 46, 46, 0.75);
+  color: #fff;
+  border-right: 1px solid #000;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10 !important;
+}
+
+.layer-management {
+  width: 100%;
+}
+
+.layer-management .menu-switch {
+  width: 72px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.layer-management .menu-switch i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url(../../../images/menu.png) no-repeat;
+  background-size: 16px;
+  vertical-align: middle;
+}
+
+.layer-management .menu-switch span:hover {
+  text-decoration: underline;
+}
+
+.layer-management .ztree-demo-background {
+  display: none;
+  position: fixed;
+  top: 98px;
+  right: 10px;
+  /* bottom: 25px; */
+  height: 64%;
+  width: 240px;
+  background: rgba(31,39,48, .4);
+  border: 1px solid rgb(69, 154, 251);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.layer-management .ztree-demo-background .ztree {
+  position: absolute;
+  top: 47px;
+  bottom: 10px;
+  overflow: auto;
+  width: 100%;
+  height: auto;
+}
+
+.layer-management .ztree-demo-background .layer-tag-bar {
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  border-bottom: 1px solid rgb(69, 154, 251);
+}
+
+.layer-management .ztree-demo-background .layer-tag-bar img {
+  float: left;
+  margin-top: 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+}
+
+.layer-management .ztree-demo-background .layer-tag-bar span{
+  float: left;
+  font-size: 18px;
+  margin-left: 6px;
+
+}
+
+.layer-management .ztree-demo-background .layer-tag-bar i {
+  float: right;
+  height: 100%;
+  width: 46px;
+  font-size: 46px;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  cursor: pointer;
+}
+
+.layer-management a {
+  color: #fff !important;
+}
+
+.layer-management .ztree li span {
+  color: rgb(228, 228, 228);
+}
+
+#treeDemo a.curSelectedNode {
+  background-color: transparent !important;
+  border: none;
+}
+
+#treeDemo li ul li a span.button.ico_docu {
+  background-size: 16px !important;
+}
+#layermanagement {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#layermanagement iframe {
+  height: 95% !important;
+}

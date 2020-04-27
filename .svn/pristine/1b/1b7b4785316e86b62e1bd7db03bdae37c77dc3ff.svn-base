@@ -1,0 +1,438 @@
+.jimu-widget-MountainFloodWarning {
+	display: none;
+	position: fixed !important;
+	left: 80px !important;
+	top: 45px !important;
+	bottom: 25px !important;
+	width: 0;
+	height: auto !important;
+	z-index: 40 !important;
+	background-color: rgba(35,36,58);
+
+}
+
+/* 公共样式 */
+
+.jimu-widget-MountainFloodWarning div,
+.jimu-widget-MountainFloodWarning table,
+.jimu-widget-MountainFloodWarning tr,
+.jimu-widget-MountainFloodWarning thead,
+.jimu-widget-MountainFloodWarning tbody,
+.jimu-widget-MountainFloodWarning ul,
+.jimu-widget-MountainFloodWarning th,
+.jimu-widget-MountainFloodWarning td,
+.jimu-widget-MountainFloodWarning li,
+.jimu-widget-MountainFloodWarning input,
+.jimu-widget-MountainFloodWarning button,
+.jimu-widget-MountainFloodWarning span {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	border: none;
+}
+
+/* 图表区域样式 */
+
+.early-warning-main {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 360px;
+	height: 100%;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.early-warning-echarts {
+	margin-top: 4px !important;
+	height: 264px;
+}
+
+.early-warning-echarts .big {
+	margin: 0 2px 0 2px;
+	height: 34px;
+	line-height: 34px;
+	border-bottom: 1px solid #ccc;
+}
+
+
+.early-warning-echarts .big .toggle-btn {
+	color: rgb(255, 255, 255);
+	border-radius: 4px 4px 0 0;
+	border: 1px solid rgb(255, 255, 255);
+	border-bottom: none;
+}
+
+.early-warning-echarts .big span {
+	float: left;
+	margin-right: 2px;
+	width: 110px;
+	font-size: 16px;
+	text-align: center;
+	color: rgb(140, 150, 166);
+	/* border-radius: 16px 16px 0 0; */
+	cursor: pointer;
+}
+
+.early-warning-echarts ul {
+	position: relative;
+	width: 100%;
+	height: 230px;
+}
+
+.early-warning-echarts ul li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 360px;
+	height: 230px;
+}
+
+.early-warning-echarts ul li.nodata {
+	line-height: 230px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+}
+
+
+/* 
+.early-warning-echarts ul li div:nth-child(3) {
+	background-color: #23243a !important;
+	color: #fff !important; 
+} */
+/* 数据内容展示区域的样式 */
+
+.early-warning-content table,
+.early-warning-food-content table {
+	/* margin: 10px; */
+	width: 360px;
+	border-collapse: collapse;
+}
+
+.early-warning-content,
+.early-warning-food-content {
+	position: absolute;
+	top: 264px;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+}
+
+.early-warning-food-content {
+	display: none;
+}
+
+/* 暂无有效预警提示得box得样式 */
+
+.early-warning-message-box {
+	padding-top: 120px !important;
+	position: absolute;
+	top: 36px;
+	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
+}
+
+
+
+/* 河流表格区域样式修改 */
+
+.early-warning-food-content .early-warning-food-tar {
+	margin: 2px 2px 0 2px;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+}
+
+.early-warning-food-content .early-warning-food-tar .selection-btn {
+	color: rgb(255, 255, 255);
+	border-radius: 4px 4px 0 0;
+	border: 1px solid rgb(255, 255, 255);
+	border-bottom: none;
+}
+
+.early-warning-food-content .early-warning-food-tar span {
+	float: left;
+	margin-right: 2px;
+	width: 90px;
+	font-size: 16px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+	/* border-radius: 16px 16px 0 0; */
+	cursor: pointer;
+}
+
+.early-warning-food-content .early-warning-food-table {
+	position: absolute;
+	top: 32px;
+	bottom: 0;
+	height: auto;
+}
+
+.early-warning-food-content .early-warning-food-table td {
+	color: rgb(242, 10, 10);
+}
+
+
+
+.early-warning-content table,
+.early-warning-food-content table {
+	width: 100%;
+	height: 100%;
+}
+
+.early-warning-content table tr,
+.early-warning-food-content table tr {
+	height: 34px;
+	line-height: 34px;
+}
+
+.early-warning-content table tr td,
+.early-warning-content table tr th,
+.early-warning-food-content table tr th,
+.early-warning-food-content table tr td {
+	color: rgb(151, 151, 151);
+	font-size: 14px;
+	text-align: center;
+}
+
+
+.early-warning-content table tr td:first-child,
+.early-warning-content table tr th:first-child,
+.early-warning-food-content table tr th:first-child,
+.early-warning-food-content table tr td:first-child {
+	width: 38px;
+}
+
+.early-warning-food-content table tr th:nth-child(2),
+.early-warning-food-content table tr td:nth-child(2) {
+	width: 68px
+}
+
+/* .early-warning-food-content table tr td:nth-child(2):hover {
+	position: relative;
+	left: -40px;
+	width: 240px;
+	height: 34px;
+	z-index: 46;
+	background-color: #fff;
+} */
+
+.early-warning-food-content table tr th:nth-child(6),
+.early-warning-food-content table tr td:nth-child(6) {
+	width: 80px
+}
+
+
+
+.early-warning-content table>tbody>tr,
+.early-warning-content table>thead,
+.early-warning-food-content table>tbody>tr,
+.early-warning-food-content table>thead {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+	/* 重要  表格固定算法 */
+}
+
+.early-warning-content table>tbody,
+.early-warning-food-content table>tbody {
+	position: absolute;
+	top: 34px;
+	bottom: 0;
+	height: auto;
+	overflow: hidden;
+	display: block;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.early-warning-content table>tbody tr,
+.early-warning-food-content table>tbody tr {
+	cursor: pointer;
+}
+
+.early-warning-content table>tbody td,
+.early-warning-food-content table>tbody td {
+	padding: 0 4px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.early-warning-content table tr th,
+.early-warning-food-content table tr th {
+	background-color: rgba(35,36,58);
+	color: rgb(255, 255, 255);
+}
+
+.early-warning-content table>tbody tr:nth-child(odd),
+.early-warning-food-content table>tbody tr:nth-child(odd) {
+	background-color: rgba(2,24,55);
+}
+
+.early-warning-content table>tbody tr:nth-child(even),
+.early-warning-food-content table>tbody tr:nth-child(even) {
+	background-color: rgba(35,36,58);
+}
+
+/* 调整滚动条的样式 */
+
+.early-warning-content table>tbody::-webkit-scrollbar {
+	display: none;
+}
+
+.early-warning-food-content table>tbody::-webkit-scrollbar {
+	display: none;
+}
+
+.early-warning-content table>tbody {
+	scrollbar-width: none;
+}
+
+.early-warning-food-content table>tbody {
+	scrollbar-width: none;
+}
+
+.early-warning-content table>tbody {
+	-ms-scroll-chaining: chained;
+	-ms-overflow-style: none;
+	-ms-content-zooming: zoom;
+	-ms-scroll-rails: none;
+	-ms-content-zoom-limit-min: 100%;
+	-ms-content-zoom-limit-max: 500%;
+	-ms-scroll-snap-type: proximity;
+	-ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+	-ms-overflow-style: none;
+	overflow: auto;
+}
+
+.early-warning-food-content table>tbody {
+	-ms-scroll-chaining: chained;
+	-ms-overflow-style: none;
+	-ms-content-zooming: zoom;
+	-ms-scroll-rails: none;
+	-ms-content-zoom-limit-min: 100%;
+	-ms-content-zoom-limit-max: 500%;
+	-ms-scroll-snap-type: proximity;
+	-ms-scroll-snap-points-x: snapList(100%, 200%, 300%, 400%, 500%);
+	-ms-overflow-style: none;
+	overflow: auto;
+}
+
+
+/* 洪水点击跳转显示面板 */
+
+.jimu-widget-MountainFloodWarning .early-warning-food-details {
+	display: none;
+	position: fixed;
+	top: 120px;
+	right: 10px;
+	bottom: 400px;
+	width: 280px;
+	height: auto;
+	background: rgb(31, 39, 48, .4);
+	border: 1px solid rgb(69, 154, 251) !important;
+	font-size: 14px;
+	color: #fff;
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-close {
+	/* position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 30px;
+	height: 30px; */
+	float: right;
+	height: 100%;
+	width: 35px;
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-close i {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+	width: 35px;
+	font-size: 46px;
+	font-weight: 400;
+	font-style: normal;
+	text-align: center;
+	cursor: pointer;
+	color: #fff;
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-header {
+	position: relative;
+	height: 36px;
+	border-bottom: 1px solid rgb(69, 154, 251) !important;
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-header span {
+	float: left;
+	margin-top: 8px;
+	display: inline-block;	
+	width: 80px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border-radius: 5px 5px 0 0;
+	box-sizing: border-box;
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-header span.seleclick {
+	border-top: 1px solid rgb(69, 154, 251);
+	border-left: 1px solid rgb(69, 154, 251);
+	border-right: 1px solid rgb(69, 154, 251);
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-header span:nth-child(1) {
+	margin-left: 4px;
+}
+
+.jimu-widget-MountainFloodWarning .warning-food-content {
+	position: absolute;
+	top: 36px;
+	bottom: 0px;
+	left: 0;
+	padding: 10px;
+	width: 280px;
+	height: auto;
+	overflow: auto;
+	box-sizing: border-box;
+}
+.jimu-widget-MountainFloodWarning .warning-food-content ul {
+	width: 260px;
+	height: 100%;
+}
+.jimu-widget-MountainFloodWarning .warning-food-content ul li {
+	width: 260px;
+	height: 30px;
+	line-height: 30px;
+}
+.jimu-widget-MountainFloodWarning .warning-food-content ul li div {
+	display: inline-block;
+	width: 48%;
+}
+.jimu-widget-MountainFloodWarning .warning-food-content ul li span {
+	display: inline-block;
+	width: 50px;
+}
+.jimu-widget-MountainFloodWarning .warning-food-content ul li input {
+	padding: 0 6px;
+	width: 70px;
+	height: 20px;
+	color: #fff;
+	background-color:rgba(140, 151, 165, 0.5)
+}
+.jimu-widget-MountainFloodWarning .warning-food-content warning-xq {
+	width: 260px;
+	overflow: auto;
+	height: 100%;
+}
+.jimu-widget-MountainFloodWarning .warning-food-content warning-xq::-webkit-scrollbar {
+	width: 0px;
+	/* height: auto; */
+} 

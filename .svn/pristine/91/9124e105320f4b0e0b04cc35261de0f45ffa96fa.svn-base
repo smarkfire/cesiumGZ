@@ -1,0 +1,544 @@
+{
+  "theme": {
+    "name": "FoldableTheme",
+    "styles": [
+      "default",
+      "red",
+      "purple",
+      "blue",
+      "green",
+      "cyan",
+      "black",
+      "yellow"
+    ],
+    "version": "2.10"
+  },
+  "modeUrl":"http://www.sw797.com:801/gzsw3D/v2/data/mx/",
+  "cesiumToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2ODUxMWQxMC1lNzZjLTRhZjktYmZiMS1lNWFmYWJkZWIwOTEiLCJpZCI6MTQxNzMsInNjb3BlcyI6WyJhc3IiLCJnYyJdLCJpYXQiOjE1NjQ5Njg5NzV9.ojKhhmjl8L0EtxsZC14LZgmXn5VVS0CRBCYuRK_DdIo",
+  "authorizedCrossOriginDomains": [],
+  "title": "水文水生态综合监管云平台",
+  "subtitle": "",
+  "keepAppState": true,
+  "logo": "images/app-logo.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [{
+    "label": "",
+    "url": ""
+  }],
+
+  "widgetOnScreen": {
+    "widgets": [{
+        "uri": "themes/FoldableTheme/widgets/HeaderController/Widget",
+        "position": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "height": 70,
+          "relativeTo": "browser"
+        }
+      },
+      {
+        "uri": "widgets/CommonBase/Widget"
+      },
+      {
+        "name": "水文要素",
+        "uri": "widgets/Hydrology/Widget",
+        "position": {
+          "left": 0,
+          "top": 45,
+          "bottom": 1,
+          "width": "80px",
+          "height": "100%",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/Layermanagement/Widget",
+        "position": {
+          "right": 82,
+          "top": 55,
+          "height": "32px",
+          "width": "72px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/Basemap/Widget",
+        "position": {
+          "right": 10,
+          "top": 55,
+          "height": "32px",
+          "width": "72px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/Tool/Widget",
+        "position": {
+          "right": 154,
+          "top": 55,
+          "height": "32px",
+          "width": "96px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/HomeButton/Widget",
+        "position": {
+          "right": 10,
+          "bottom": 80,
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/FullScreen/Widget",
+        "position": {
+          "right": 10,
+          "bottom": 120,
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/SceneMode/Widget",
+        "position": {
+          "right": 10,
+          "bottom": 40,
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/ShowPosition/Widget",
+        "position": {
+          "right": 0,
+          "bottom": 0,
+          "width": "100%",
+          "height": "25px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "uri": "widgets/SubmergenceAnalysis/Widget",
+        "position": {
+          "right": "calc(50% - 335px)",
+          "bottom": 25,
+          "width": "650px",
+          "height": "50px",
+          "relativeTo": "map"
+        }
+      },  
+      {
+        "name": "站网详情",
+        "uri": "widgets/HydroNetWorkDetails/Widget",
+        "position": {
+          "right": 0,
+          "top": 240,
+          "width": "34px",
+          "height": "70px",
+          "relativeTo": "map",
+          "z-index": 55
+        }
+      },
+      {
+        "name": "飞行路线",
+        "uri": "widgets/FlyRoute/Widget",
+        "position": {
+          "right": 10,
+          "top": 96,
+          "width": "260px",
+          "height": "64%",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "水面线分析",
+        "uri": "widgets/DynamicRiver/Widget",
+        "position": {
+          "right": 20,
+          "top": 96,
+          "width": "300px",
+          "height": "312px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "图上量算",
+        "uri": "widgets/Measurement/Widget",
+        "position": {
+          "right": 10,
+          "top": 96,
+          "width": "350px",
+          "height": "320px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "我的标记",
+        "uri": "widgets/Sign/Widget",
+        "position": {
+          "right": 10,
+          "top": 96,
+          "width": "320px",
+          "height": "360px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "山洪预警",
+        "uri": "widgets/MountainFloodWarning/Widget",
+        "position": {
+          "left": 0,
+          "top": 45,
+          "relativeTo": "map"
+        }
+      } 
+    ],
+    "groups": [],
+    "panel": {
+      "uri": "jimu/OnScreenWidgetPanel",
+      "position": {
+        "relativeTo": "map"
+      }
+    }
+  },
+  "map": {
+    "3D": true,
+    "2D": false,
+
+    "position": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    },
+
+    "basemaps": [{
+      "label": "行政区划",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/jctczt/MapServer",
+      "layers": "0",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "河流水系",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/jctczt/MapServer",
+      "layers": "1",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "铁路公路",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/jctczt/MapServer",
+      "layers": "2",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "高速公路",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/jctczt/MapServer",
+      "layers": "3",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }],
+    "swzwLayers": [{
+      "label": "水文站",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/swzwzt/MapServer",
+      "layers": "0",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "水位站",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/swzwzt/MapServer",
+      "layers": "1",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "雨量站",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/swzwzt/MapServer",
+      "layers": "2",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "水质站",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/swzwzt/MapServer",
+      "layers": "3",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "中小河流站",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/swzwzt/MapServer",
+      "layers": "4",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "水库水位站",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/jctczt/MapServer",
+      "layers": "2",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }],
+    "shLayers": [{
+      "label": "山洪隐患点",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/shskzt/MapServer",
+      "layers": "0",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "大型水库",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/shskzt/MapServer",
+      "layers": "1",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "中型水库",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/shskzt/MapServer",
+      "layers": "2",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "小型水库",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/shskzt/MapServer",
+      "layers": "3",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }],
+    "djyLayers": [{
+      "label": "东江源区水系图",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/djysx/MapServer",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "水文监测基本站网",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/djyswjcjbzw/MapServer",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "专项分析研究实验站网",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/djyztfxsyzw/MapServer",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }, {
+      "label": "遥测站点",
+      "url": "http://171.35.109.175:18080/arcgis/rest/services/GZSW/djyyczw/MapServer",
+      "type": "arcgis",
+      "icon": "images/basemaps/tiandituimage.png",
+      "show": false
+    }],    
+    "imageryProviderViewModels":[
+    	{
+    		"name":"天地图影像",
+    		"tooltip":"天地图全球影像地图服务（国家测绘局）",
+    		"iconUrl":"images/basemaps/tiandituimage.png",
+    		"layers":[
+    			{
+			      "label": "天地图影像",
+			      "type": "wmts",
+			      "url": "http://t0.tianditu.gov.cn/img_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
+			      "layer": "img",
+			      "style": "default",
+			      "format": "tiles",
+			      "tileMatrixSetID": "w",
+			      "maximumLevel": 17
+			    },
+			    {
+			      "label": "天地图影像标注",
+			      "type": "wmts",
+			      "url": "http://t0.tianditu.gov.cn/cia_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
+			      "layer": "cia",
+			      "style": "default",
+			      "format": "tiles",
+			      "tileMatrixSetID": "w",
+			      "maximumLevel": 17
+			    }
+    		]
+    	},
+    	{
+      	"name":"离线影像",
+    		"tooltip":"赣州市离线影像",
+    		"iconUrl":"images/basemaps/gzyx.png",
+    		"layers":[
+    			{
+			      "label": "赣州市离线影像",
+			      "type": "url",
+			      "url": "http://www.sw797.com:801/gzsw3D/v2/data/wp/{z}/{x}/{y}.png"
+			    }
+    		]
+      }
+    ],
+    "terrainProviderViewModels":[
+    	{
+      	"name":"无地形",
+    		"tooltip":"WGS84标准球体",
+    		"iconUrl":"images/basemaps/TerrainEllipsoid.png",
+    		"url":""
+      },
+      {
+      	"name":"赣州地形",
+    		"tooltip":"由 普适科技 提供的赣州地形",
+    		"iconUrl":"images/basemaps/TerrainSTK.png",
+    		"url":"http://www.sw797.com:801/gzsw3D/v2/data/gzdx"
+      }
+    ],
+    "mapOptions": {
+      "positionInfo": {
+        "xmin": 113.91360696000004,
+        "ymin": 24.48625203200004,
+        "xmax": 116.63821188000009,
+        "ymax": 27.143656022000073
+      },
+      "animation": false,
+      "baseLayerPicker": true,
+      "fullscreenButton": false,
+      "geocoder": false,
+      "homeButton": false,
+      "infoBox": false,
+      "sceneModePicker": false,
+      "selectionIndicator": false,
+      "timeline": false,
+      "navigationHelpButton": false,
+      "scene3DOnly": true,
+      "navigationInstructionsInitiallyVisible": false,
+      "terrainExaggeration": 1,
+      "showRenderLoopErrors": false
+    }
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/FoldableTheme/panels/FoldablePanel/Panel",
+      "position": {
+        "top": 45,
+        "left": 5,
+        "bottom": 5,
+        "zIndex": 5,
+        "relativeTo": "map"
+      }
+    },
+    "widgets": [
+      {
+        "name": "综合监管",
+        "uri": "widgets/ComprehensiveSupervise/Widget",
+        "position": {
+          "left": 0,
+          "top": 45,
+          "bottom": 1,
+          "width": "80px",
+          "height": "100%",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "水文站网",
+        "uri": "widgets/HydrologicalNetwork/Widget",
+        "position": {
+          "left": 0,
+          "bottom": 90,
+          "top": 45,
+          "width": "100px",
+          "height": "auto",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "雨水情信息",
+        "uri": "widgets/YuShuiQing/Widget"
+      },
+      {
+        "name": "水文风险区",
+        "uri": "widgets/HydrologicalRiskArea/Widget"
+      },    
+      {
+        "name": "水生态健康评估",
+        "uri": "widgets/WaterAssessment/Widget"
+      },
+      {
+        "name": "水文水环境分析",
+        "uri": "widgets/ThematicAnalysisOfHydrology/Widget"
+      },       
+      {
+        "name": "查询定位",
+        "uri": "widgets/Location/Widget"
+      },
+      {
+        "name": "一键找河长",
+        "uri": "widgets/RiverChiefSystem/Widget",
+        "position": {
+          "left": 0,
+          "top": 0,
+          "width": "100px",
+          "height": "100%",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "堰塞湖分析",
+        "uri": "widgets/AnalysisOfBarrierLake/Widget",
+        "position": {
+          "left": 20,
+          "top": 90,
+          "width": "440px",
+          "height": "320px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "河道模拟",
+        "uri": "widgets/ThematicDynamicRiver/Widget",
+        "position": {
+          "left": 20,
+          "top": 90,
+          "width": "440px",
+          "height": "320px",
+          "relativeTo": "map"
+        }
+      },
+      {
+        "name": "剖面分析",
+        "uri": "widgets/MapSection/Widget",
+        "position": {
+          "left": 20,
+          "top": 90,
+          "width": "440px",
+          "height": "320px",
+          "relativeTo": "map"
+        }
+      }
+    ],
+    "groups": []
+  },
+  "loadingPage": {
+    "backgroundColor": "#508dca",
+    "backgroundImage": {
+      "visible": false
+    },
+    "loadingGif": {
+      "visible": true,
+      "uri": "jimu.js/loading/images/predefined_loading_1.gif",
+      "width": 58,
+      "height": 29
+    }
+  },
+  "wabVersion": "2.11",
+  "isTemplateApp": true,
+  "isWebTier": false,
+  "httpProxy": {
+    "useProxy": true,
+    "alwaysUseProxy": false,
+    "url": "",
+    "rules": []
+  },
+
+  "logoLink": ""
+}

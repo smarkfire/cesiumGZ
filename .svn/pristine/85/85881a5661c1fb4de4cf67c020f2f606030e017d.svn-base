@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>河道站</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    <div class="river-course">
+		<div class="river-top">
+			<div class="river-menu">
+				<ul>
+					<li class="on" id="riverBtnOne">水位过程</li>
+					<li id="riverBtnTwo">八时水位</li>
+					<li id="riverBtnFou">基础信息</li>
+				</ul>
+			</div>
+		</div>
+		<div class="river-box">
+			<!-- 水位过程  -->
+			<div class="river-one river-con">
+				<div class="river-box-top">
+					<div class="river-data">
+						<input type="text" class="datainp time-icon" id="timestart" placeholder="开始日期">
+						<span>至</span>
+					 	<input type="text" class="datainp time-icon" id="timeend" placeholder="结束日期">
+					</div>
+					<input type="button" value="查询" class="river-btn" id="riverBtn"/>
+					 <div class="select">
+					     <div class="input_in">
+					         <input type="text" value="快速查询" readonly="readonly"/>
+					     </div>
+					     <div class="city hide" id="riverSel">
+					         <ul>
+					             <li data="12">最近12小时</li>
+					             <li data="24">最近24小时</li>
+					             <li data="36">最近36小时</li>
+					             <li data="72">最近72小时</li>
+					         </ul>
+					     </div>
+					 </div>
+				</div>
+				<div class="river-pei" id="riverPei"></div>
+				<div class="river-tab">
+					<table class="table-thead river-thead">
+				        <thead>
+				        <tr>
+				            <th><div></div></th>
+				            <th><div>时间</div></th>
+				            <th><div>水位	</div></th>
+				            <th><div>水势</div></th>
+				            <th><div>流量</div></th>
+				            <th><div></div></th>
+				        </tr>
+				        </thead>
+				    </table>
+				    <div class="comTbody">
+				        <table class="table-tbody river-tbody" style="border-top: 0;">
+				            <tbody id="riverTable">
+				            </tbody>
+				        </table>
+				    </div>
+				</div>
+			</div>
+			<!-- 八时水位  -->
+			<div class="river-two river-con none">
+				<div class="river-box-top">
+					<div class="river-data">
+						<input class="datainp wicon" id="inpstart" type="text" placeholder="开始日期" readonly ><span>至</span><input class="datainp wicon" id="inpend" type="text" placeholder="结束日期" readonly>
+					</div>
+					<input type="button" value="查询" class="river-btn" id="eigthRiverBtn"/>
+					<div class="select">
+					     <div class="input_in">
+					         <input type="text" value="快速查询" readonly="readonly"/>
+					     </div>
+					     <div class="city hide" id="eightRiverSel">
+					         <ul>
+					             <li data="本月">本月</li>
+					             <li data="上月">上月</li>
+					         </ul>
+					     </div>
+					 </div>
+				</div>		 
+				<div class="river-pei" id="eigthRiverWeater"></div>
+				<div class="river-tab">
+					<table class="table-thead river-thead">
+				        <thead>
+				        <tr>
+				            <th><div></div></th>
+				            <th><div>时间</div></th>
+				            <th><div>水位	</div></th>
+				            <th><div>水势</div></th>
+				            <th><div>流量</div></th>
+				            <th><div></div></th>
+				        </tr>
+				        </thead>
+				    </table>
+				    <div class="comTbody">
+				        <table class="table-tbody river-tbody" style="border-top: 0;">
+				            <tbody id="eigthRiverTable">
+				            </tbody>
+				        </table>
+				    </div>
+				</div>	 
+			</div>
+			<!--&lt;!&ndash; 预报水情信息  &ndash;&gt;
+			<div class="river-thr river-con none"></div>-->
+			<!-- 基础信息  -->
+			<div class="river-fou river-con none">
+				<div class="river-fou-box">
+					<ul id="riverInfo">
+						
+					</ul>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+    <script src="../../../libs/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../../../libs/echarts/v4/echarts.min.js"></script>
+    <script src="../../../libs/laydate/laydate.js"></script>
+    <script src="./js/river.js"></script>
+    <script src="./js/start.js"></script>
+    <script src="./js/end.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+.jimu-widget-PanoramaView{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#qjGrid th, #qjGrid td {
+  text-align: center;
+}
+
+.jimu-widget-PanoramaView .jimu-btn {
+  margin-left: 10px;
+  float: left;
+  height: 30px;
+  background: #094895;
+}
+
+.jimu-widget-PanoramaView .load-box-list {
+  display: none;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  border: 1px #ccc solid;
+  z-index: 55;
+}
+
+.jimu-widget-PanoramaView .load-box-list .rote-load {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 80px;
+}
+
+.jimu-widget-PanoramaView .load-box-list .rote-load img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  animation: rotete 3s linear infinite;
+}
+
+.jimu-widget-PanoramaView .load-box-list .rote-load span {
+  margin: 0 !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px !important;
+  text-align: center;
+}
+
+@keyframes rotete {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.jimu-widget-PanoramaView #qjGrid .load-box-list {
+  /*margin-left: 1%;*/
+  height: auto;
+  overflow-y: auto;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+}

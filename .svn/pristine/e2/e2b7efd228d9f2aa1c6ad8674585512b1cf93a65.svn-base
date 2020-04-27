@@ -1,0 +1,194 @@
+.jimu-widget-AnalysisOfBarrierLake {
+	width: 440px !important;
+	height: 100%;
+	position: fixed !important;
+	left: 30px !important;
+	top: 75px !important;
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 5px;
+	background: rgba(31, 39, 48, .7);
+	z-index: 41 !important;
+	color: rgb(255, 255, 255);
+}
+
+.jimu-widget-AnalysisOfBarrierLake div,
+.jimu-widget-AnalysisOfBarrierLake i,
+.jimu-widget-AnalysisOfBarrierLake ul,
+.jimu-widget-AnalysisOfBarrierLake li,
+.jimu-widget-AnalysisOfBarrierLake span,
+.jimu-widget-AnalysisOfBarrierLake input,
+.jimu-widget-AnalysisOfBarrierLake h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.jimu-widget-AnalysisOfBarrierLake div.analysis-header {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	border-bottom: 1px solid rgb(69, 154, 251);
+}
+
+.jimu-widget-AnalysisOfBarrierLake div.analysis-header i {
+	display: inline-block;
+	margin-left: 6px;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: url(../../../images/toolbox.png ) no-repeat 0 -20px;
+	background-size: 20px;
+}
+
+.jimu-widget-AnalysisOfBarrierLake div.dong {
+	margin: 8px 17px; 
+}
+
+.jimu-widget-AnalysisOfBarrierLake ul li {
+	margin: 5px 0;
+	list-style: none;
+	height: 46px;
+	line-height: 46px;
+	font-size: 16px;
+}
+
+
+
+.jimu-widget-AnalysisOfBarrierLake li span {
+	display: inline-block;
+	width: 51%;
+	text-align: left;
+}
+
+.jimu-widget-AnalysisOfBarrierLake li input {
+	display: inline-block;
+	width: 49%;
+	height: 42px;
+	border: 0;
+	color: #fff;
+	vertical-align: middle;
+	background: rgba(140, 151, 165, 0.7);
+	padding: 0 10px;
+}
+
+.jimu-widget-AnalysisOfBarrierLake li:nth-child(5) input {
+	width: 49%;
+}
+
+.jimu-widget-AnalysisOfBarrierLake li:nth-child(5) input:nth-child(1) {
+	margin-right: 2%;
+}
+
+.jimu-widget-AnalysisOfBarrierLake li:nth-child(1) input,
+.jimu-widget-AnalysisOfBarrierLake li:nth-child(5) input {
+	cursor: pointer;
+	background: rgb(2,24,55);
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 4px;
+}
+
+.jimu-widget-AnalysisOfBarrierLake .dong-echarts {
+	display: none;
+	position: absolute;
+	top: 360px;
+	background: rgba(90, 87, 87, 0.7);
+	width: 560px;
+	height: 360px;
+	z-index: 55;
+}
+
+.jimu-widget-AnalysisOfBarrierLake p {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 368px;
+	left: 12px;
+	width: 150px;
+	height: 200px;
+	color: #fff;
+	line-height: 20px;
+	text-indent: 2em;
+	letter-spacing: 1.5px;
+	font-size: 16px;
+	word-break: break-all;
+	text-align-last: left;
+	text-align: justify;
+	text-justify: distribute-all-lines;
+	z-index: 56;
+}
+
+.jimu-widget-AnalysisOfBarrierLake .dong-progress {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 500px;
+	height: 0px;
+	z-index: 33;
+	background: rgba(59, 59, 59, 0.7);
+
+}
+
+.jimu-widget-AnalysisOfBarrierLake .dong-progress h2 {
+	margin: 10px 0;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+.jimu-widget-AnalysisOfBarrierLake .dong-progress .container {
+	display: inline-block;
+	width: 100%;
+	height: 20px;
+	padding-right: 10px;
+	border: 1px solid #999;
+	border-radius: 5px;
+}
+
+.jimu-widget-AnalysisOfBarrierLake .dong-progress .container .h-100P {
+	height: 100%;
+}
+
+.jimu-widget-AnalysisOfBarrierLake .dong-progress .container .bar {
+	display: inline-block;
+	background: linear-gradient(to right, #ff4343, #48adff);
+	color: white;
+	font-weight: bold;
+	padding: 0 5px;
+	text-align: right;
+	border-radius: 5px;
+	border-right: 1px solid #999;
+}
+
+
+
+.jimu-widget-AnalysisOfBarrierLake .storage-capacity-curve {
+	display: none;
+	padding-top: 10px; 
+	position: absolute;
+	top: 360px;
+	left: 580px;
+	background: rgba(206, 204, 204, 0.7);
+	width: 500px;
+	height: 360px;
+	z-index: 55;
+}
+
+.jimu-widget-AnalysisOfBarrierLake .storage-name {
+	display: none;
+	position: absolute;
+	top: 686px;
+	left: 780px;
+	width: 100px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 14px;
+	color: rgba(40, 37, 161, 0.7);
+	z-index: 111 !important;
+}

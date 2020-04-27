@@ -1,0 +1,272 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>赣州水文三维虚拟电子沙盘</title>
+	<!--jquery引用-->
+	<script src="libs/jquery/jquery-3.3.1.min.js"></script>
+	<!--layer引用-->
+	<script src="libs/layer/layer.js"></script>
+	<script>
+		function openWidget(name) {
+			$("#mapFrame")[0].contentWindow.runWidget(name);
+		}
+
+		function openAddress(name) {
+			if (name = "hz") {
+				layer.open({
+					type: 2,
+					title: '一键找河长',
+					shadeClose: true,
+					shade: false,
+					offset: '70px',
+					maxmin: true, //开启最大化最小化按钮
+					area: ['100%', 'calc(100% - 70px)'],
+					content: 'http://www.sw797.com:801/gzsw3D/views/water/River_Len.html'
+				});
+				$("#mapFrame")[0].contentWindow.deleteEntity('一键找河长');
+				$("#mapFrame")[0].contentWindow.deletePrima('一键找河长');
+				$("#mapFrame")[0].contentWindow.deleteDong('一键找河长');
+			}
+
+		}
+
+		$(function () {
+			// idx 记录当前点击li的上一个Li的下标
+			var idx;
+			$('.nav li').click(function () {
+				var that = this;
+				// 获取水文模块的$元素
+				var hydro = $($("#mapFrame")[0].contentWindow.document).children().find(
+					'.jimu-widget-Hydrology');
+				var mangos = $($("#mapFrame")[0].contentWindow.document).children().find(
+					'.jimu-widget-ManGos');
+				var romeTool = $($("#mapFrame")[0].contentWindow.document).children().find(
+					'.jimu-widget-SubmergenceAnalysis');
+				var dongJ = $($("#mapFrame")[0].contentWindow.document).children().find(
+					'.jimu-widget-DongJ');
+				// 当下标为水文模块的时候
+				if ($(this).index() == 1) {
+					// 如果水文模块样式是隐藏的
+					if (hydro.css('display') == 'none') {
+						$("#mapFrame")[0].contentWindow.deletePrima('水文要素');
+						$("#mapFrame")[0].contentWindow.deleteDong('水文要素');
+						// 如果上一个点击的下标是一键找河长的话，则触发，一键找河长的关闭点击事件
+						if (idx == 5) {
+							$('.layui-layer-close1').trigger('click')
+						}
+						dongJ.hide();
+						mangos.hide();
+						romeTool.hide();
+						// 则显示水文模块
+						hydro.show(100);
+						// 显示的同时触发其他模块的关闭点击事件
+						$($("#mapFrame")[0].contentWindow.document).children().find('.jimu-panel').children()
+							.children(".close-btn").trigger('click');
+					} else {
+						// 如水文是显示状态的时候，则水文隐藏
+						hydro.hide(100);
+						// 并且，水文内部A的样式移除
+						hydro.find('a').removeClass('on');
+					}
+				} else { // 如果下标不是水文的时候
+
+					if ($(this).index() == 7) {
+						if (dongJ.css('display') == 'none') {
+							$("#mapFrame")[0].contentWindow.deletePrima('东江源专题');
+							$("#mapFrame")[0].contentWindow.deleteEntity('东江源专题');
+							$("#mapFrame")[0].contentWindow.rquere($(this).index());
+							// 如果上一个点击的下标是一键找河长的话，则触发，一键找河长的关闭点击事件
+							if (idx == 5) {
+								$('.layui-layer-close1').trigger('click')
+							}
+							hydro.hide();
+							mangos.hide();
+							romeTool.hide();
+							// 则显示东江源专题模块
+							dongJ.show(100);
+							// 显示的同时触发其他模块的关闭点击事件
+							$($("#mapFrame")[0].contentWindow.document).children().find('.jimu-panel')
+								.children()
+								.children(".close-btn").trigger('click');
+						} else {
+							dongJ.hide(100);
+						}
+
+					} else {
+						dongJ.hide(100);
+					}
+
+
+
+					if ($(this).index() == 5) { // 当下标是找河长的时候
+						// 其他模块需要关闭
+						$($("#mapFrame")[0].contentWindow.document).children().find('.jimu-panel').children()
+							.children(".close-btn").trigger('click');
+					} else {
+						// 如果不是的话，就关闭找河长模块
+						$('.layui-layer-close1').trigger('click')
+					}
+					// 如果上一个下标的也是找河长的话，就关闭找河长
+					if (idx == 5) {
+
+						$('.layui-layer-close1').trigger('click')
+					}
+
+					if ($(this).index() == 4) {
+						$("#mapFrame")[0].contentWindow.deleteEntity('漫游浏览');
+						$("#mapFrame")[0].contentWindow.deleteDong('漫游浏览');
+						if (mangos.css('display') == 'none') {
+							mangos.show(100);
+							romeTool.show();
+							$($("#mapFrame")[0].contentWindow.document).children().find('.jimu-panel')
+								.children()
+								.children(".close-btn").trigger('click');
+						} else {
+							mangos.hide(100);
+							romeTool.hide();
+						}
+					} else {
+						mangos.hide(100);
+						romeTool.hide();
+					}
+
+					// 如果当前点击的是水情模块，则清除
+					if ($(this).index() == 2) {
+						$("#mapFrame")[0].contentWindow.deleteEntity('水情信息');
+						$("#mapFrame")[0].contentWindow.deletePrima('水情信息');
+						$("#mapFrame")[0].contentWindow.deleteDong('水情信息');
+						mangos.hide(100);
+						romeTool.hide();
+					}
+
+					// 水文模块隐藏
+					hydro.hide(100);
+					// 移除A的样式
+					hydro.find('a').removeClass('on');
+					// panel模板显示
+					hydro.siblings('.jimu-foldable-panel').show(100);
+				}
+				// 记录上一个点击的Li的下标
+				idx = $(this).index();
+			})
+		})
+	</script>
+</head>
+
+<body>
+	<div class="navbar-fixed-top" id="header">
+		<div class="container-fluid" id="sss">
+			<!-- logo -->
+			<div class="logo">
+				<img class="img1" src="images/log.png">
+				<img class="img2" src="images/log-2.png">
+			</div>
+			<!-- 导航 -->
+			<ul class="nav">
+				<li title="图层管理" onclick="openWidget('LayerControl')">
+					<a id="layerGuanli" target="location-form">
+						<span></span>
+						<p>图层管理</p>
+					</a>
+					<img src="images/yuan.png">
+				</li>
+				<li title="水文要素">
+					<a class="re" id="wateryaosu">
+						<span></span>
+						<p>水文要素</p>
+					</a>
+					<img src="images/yuan.png">
+				</li>
+
+				<li title="水情信息" onclick="openWidget('ShuiQing')">
+					<a class="re" id="shuiqing">
+						<span></span>
+						<p>水情信息</p>
+					</a>
+					<img src="images/yuan.png">
+				</li>
+
+				<li title="山洪信息" onclick="openWidget('ShanHong')">
+
+					<a class="re" id="shanhong">
+						<span></span>
+						<p>山洪信息</p>
+					</a>
+					<img src="images/yuan.png">
+				</li>
+				<li title="漫游浏览">
+
+					<a class="re" id="roamingLiulan">
+						<span></span>
+						<p>漫游浏览</p>
+					</a>
+					<img src="images/yuan.png">
+				</li>
+				<!-- <li title="查询定位">
+					<a class="re" id="search_Loc">
+						<span></span>
+						<p>查询定位</p>
+					</a>
+				</li> -->
+
+				<li title="一键找河长" onclick="openAddress('hz')">
+					<a class="re" id="hezhang">
+						<span></span>
+						<p>一键找河长</p>
+					</a>
+				</li>
+				<li title="360°全景" onclick="openWidget('PanoramaView')">
+					<a class="re" id="open_view">
+						<span></span>
+						<p>360全景</p>
+					</a>
+				</li>
+				<li title="东江源专题">
+					<a class="re" id="open_view">
+						<span></span>
+						<p>东江源专题</p>
+					</a>
+				</li>
+				<!-- <li title="天气信息">
+					<a class="re" id="cn_weath">
+						<span></span>
+						<p>天气信息</p>
+					</a>
+				</li>
+				<li title="飞行管理" onclick="openWidget('FlightManagement')">
+					<a id="DtoolsGongju">
+						<span></span>
+						<p>飞行管理</p>
+					</a>
+				</li> -->
+				<img style="margin: 15px 3px; height: 40px; float: left;" src="images/11.png">
+				<li title="查询展示" style="margin-top: 0px;">
+					<a class="re" id="cn_weath" href="http://www.sw797.com:801/gzsw/home/realTime.html" target="_Blank">
+						<span></span>
+						<p style="font-size: 10px;">水文查询展示系统</p>
+					</a>
+				</li>
+				<li title="赣州水情" style="margin-top: 0px;">
+					<a id="DtoolsGongju" href="http://www.sw797.com:801/gzapp/#monitorduty" target="_Blank">
+						<!--target='_self'-->
+						<span></span>
+						<p style="font-size: 10px;">赣州水情信息系统</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="container">
+		<iframe id="mapFrame" width="100%" height="100%" src="map.html" scrolling="no" frameborder=0
+			style="margin:0; padding:0"></iframe>
+	</div>
+</body>
+
+</html>

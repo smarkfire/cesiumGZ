@@ -1,0 +1,442 @@
+.jimu-widget-YuShuiQing {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.jimu-widget-YuShuiQing ul,
+.jimu-widget-YuShuiQing li,
+.jimu-widget-YuShuiQing div,
+.jimu-widget-YuShuiQing input,
+.jimu-widget-YuShuiQing img,
+.jimu-widget-YuShuiQing table,
+.jimu-widget-YuShuiQing tr,
+.jimu-widget-YuShuiQing td,
+.jimu-widget-YuShuiQing th,
+.jimu-widget-YuShuiQing tbody,
+.jimu-widget-YuShuiQing thead{
+  margin: 0;
+  padding: 0;
+}
+
+.jimu-widget-YuShuiQing a {
+  text-decoration: none;
+  color: black;
+}
+
+.jimu-widget-YuShuiQing a:hover {
+  text-decoration: none;
+  color: #336699;
+}
+
+.jimu-widget-YuShuiQing #tab {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  /*margin: 1px 3px 1px 3px;*/
+  /*z-index: 9;*/
+}
+
+.jimu-widget-YuShuiQing #tab .tabul {
+  height: 30px;
+  line-height: 30px;
+}
+
+.jimu-widget-YuShuiQing #tab ul {
+  list-style: none;
+  line-height: 30px;
+  height: 30px;
+}
+
+.jimu-widget-YuShuiQing #tab .tabul ul li {
+  cursor: pointer;
+  float: left;
+  list-style: none;
+  text-align: center;
+  padding: 0px 5px;
+  margin-right: 4px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  background: rgb(187, 186, 186);
+  border-radius: 4px;
+  color: #fff;
+}
+
+.jimu-widget-YuShuiQing #tab ul li.on {
+  /*border-top: 2px solid Saddlebrown;*/
+  background: #094895;
+}
+
+.jimu-widget-YuShuiQing #tab div {
+  /*width: 100%;*/
+  line-height: 24px;
+  /*border-top: none;*/
+  /*border: 1px solid #336699;*/
+}
+
+.jimu-widget-YuShuiQing .hide {
+  display: none;
+}
+
+.jimu-widget-YuShuiQing .location-box-list {
+  /*margin-left: 1%;*/
+  overflow-y: auto;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  border: 1px #ccc solid;
+}
+
+.jimu-widget-YuShuiQing .load-box-list {
+  display: none;
+  overflow-y: auto;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  height: auto;
+  border: 1px #ccc solid;
+}
+
+.jimu-widget-YuShuiQing .load-box-list .rote-load {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 80px;
+}
+
+.jimu-widget-YuShuiQing .load-box-list .rote-load img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  animation: rote 3s linear infinite;
+}
+
+.jimu-widget-YuShuiQing .load-box-list .rote-load span {
+  margin: 0 !important;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  line-height: 20px !important;
+  text-align: center;
+}
+
+@keyframes rote {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.jimu-widget-YuShuiQing #secondPage .location-box-list {
+  /*margin-left: 1%;*/
+  height: 81.5%;
+  overflow-y: auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.jimu-widget-YuShuiQing #firstPage .location-box-list{
+  /*margin-left: 1%;*/
+  height: 81.5%;
+  overflow-y: auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.jimu-widget-YuShuiQing #thirdPage .location-box-list{
+  /*margin-left: 1%;*/
+  height: 81.5%;
+  top:3px;
+  overflow-y: auto;
+  background-color: #fff;
+  position: relative;
+}
+
+.jimu-widget-YuShuiQing #firstPage .first_top {
+  margin-top: 10px;
+  height: 32px;
+  width: 100%;
+  padding-top: 1.5px;
+  background-color: #fff;
+  border: 1px solid #d2d2d0;
+}
+
+.jimu-widget-YuShuiQing #firstPage span {
+  float: left;
+  margin-left: 6px;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.jimu-widget-YuShuiQing #firstPage .zd_inp {
+  height: 26px;
+  width: 78px;
+  border: 1px solid rgba(160, 160, 156, 1);
+  vertical-align: top;
+}
+
+.jimu-widget-YuShuiQing #firstPage .zd_quy {
+  height: 26px;
+  width: 54px;
+  border: none;
+  margin-left: 5px;
+}
+
+.jimu-widget-YuShuiQing #firstPage .select,
+.jimu-widget-YuShuiQing #thirdPage .select {
+  width: 70px !important;
+  min-width: 70px !important;
+}
+
+.jimu-widget-YuShuiQing #thirdPage .first_top {
+  margin-top: 10px;
+  height: 32px;
+  width: 100%;
+  padding-top: 1.5px;
+  background-color: #fff;
+  border: 1px solid #d2d2d0;
+}
+
+.jimu-widget-YuShuiQing #thirdPage span {
+  float: left;
+  font-size: 13px;
+  line-height: 30px;
+  margin-left: 6px;
+}
+
+.jimu-widget-YuShuiQing #thirdPage .zd_inp {
+  height: 26px;
+  width: 78px;
+  border: 1px solid rgba(160, 160, 156, 1);
+  vertical-align: top;
+}
+
+.jimu-widget-YuShuiQing #thirdPage .zd_quy {
+  height: 26px;
+  width: 54px;
+  border: none;
+  margin-left: 5px;
+}
+
+.jimu-widget-YuShuiQing .wicon {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAASAgMAAAA1aVZ3AAAACVBMVEUAAAD///9nyrNdI4MmAAAAAXRSTlMAQObYZgAAAChJREFUCNdjWAUCCxjg9DQgtTKBAUN8aigQJGCho6KiYDSJ8ggaYR8Ao74zAKjm+cYAAAAASUVORK5CYII=");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.jimu-widget-YuShuiQing .workinput {
+  width: 120px;
+  line-height: 20px;
+  border: 1px #ddd solid;
+  border-radius: 4px;
+  padding: 4px;
+  background-color: #fff;
+  float: left;
+  margin: 2px 0px;
+  font-size: 14px;
+}
+
+.jimu-widget-YuShuiQing .select {
+  position: relative;
+  width: 88px;
+  min-width: 88px;
+  height: 26px;
+  border: 1px solid rgba(160, 160, 156, 1);
+  cursor: pointer;
+  float: left;
+  /*right: 10px;*/
+  /*margin-top: -6px;*/
+}
+
+.jimu-widget-YuShuiQing .select:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -2px;
+  border-top: 5px solid #666;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.jimu-widget-YuShuiQing #sq-tab1-grid th,
+.jimu-widget-YuShuiQing #sq-tab1-grid td,
+.jimu-widget-YuShuiQing #sq-tab2-grid th,
+.jimu-widget-YuShuiQing #sq-tab2-grid td,
+.jimu-widget-YuShuiQing #sq-tab3-grid th,
+.jimu-widget-YuShuiQing #sq-tab3-grid td {
+  text-align: center;
+}
+
+.jimu-widget-YuShuiQing #sq-tab1-grid .field-Q {
+  width: 81px;
+}
+
+.jimu-widget-YuShuiQing #sq-tab1-grid .field-STNM {
+  width: 81px;
+}
+
+.jimu-widget-YuShuiQing #sq-tab3-grid .field-STNM {
+  /* width: 102px; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.jimu-widget-YuShuiQing .dgrid-column-xh {
+    width: 30px;
+}
+.jimu-widget-YuShuiQing .dgrid-column-Z {
+    width: 50px;
+}
+.jimu-widget-YuShuiQing .dgrid-column-RZ {
+    width: 50px;
+}
+
+/* .jimu-widget-YuShuiQing #sq-tab1-grid .field-TM {
+  width: 100px;
+} */
+
+#YuShuiQing {
+  height: 100%;
+  overflow: hidden;
+}
+
+
+#YuShuiQing iframe {
+  height: 95% !important;
+}
+
+.m-style {
+  position: relative;
+  text-align: center;
+  zoom: 1;
+}
+
+.m-style:before,
+.m-style:after {
+  content: "";
+  display: table;
+}
+
+.m-style:after {
+  clear: both;
+  overflow: hidden;
+}
+
+.m-style span {
+  float: left;
+  margin: 0 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.m-style .active {
+  float: left;
+  margin: 3px 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  background: #e91e63;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #e91e63;
+}
+
+.m-style a {
+  float: left;
+  margin: 3px 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.m-style a:hover {
+  color: #fff;
+  background: #e91e63;
+}
+
+.m-style .next,
+.m-style .prev {
+  font-family: "Simsun";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.now,
+.count {
+  padding: 0 5px;
+  color: #f00;
+}
+
+.eg img {
+  max-width: 800px;
+  min-height: 500px;
+}
+
+.m-style input {
+  float: left;
+  margin: 3px 5px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px !important;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  outline: none;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+#pagination_hd{
+  position: absolute;
+  margin-top: 5px;
+}
+
+#pagination_js{
+  position: absolute;
+  margin-top: 5px;
+}
+#pagination_sk{
+  position: absolute;
+  margin-top: 5px;
+}
+
+.m-style .jump-btn{
+  width: 38px !important;
+}

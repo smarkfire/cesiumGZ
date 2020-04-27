@@ -1,0 +1,84 @@
+@import "Tooltip-div.css";
+.jimu-widget-ThematicDynamicRiver{
+  width: 100%;
+  height: 100%;
+  position: fixed !important;
+  left: 30px !important;
+  top: 75px !important;
+  overflow-x: hidden;
+  background: rgba(31, 39, 48, .7);
+  font-size: 14px;
+  border: 1px solid rgb(69, 154, 251);
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-dynamicriver-header {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+	border-bottom: 1px solid rgb(69, 154, 251);
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-dynamicriver-header i {
+	display: inline-block;
+	margin-left: 6px;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background: url(../../../images/toolbox.png ) no-repeat 0 -20px;
+	background-size: 20px;
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis {
+	margin: 12px 17px 10px  17px; 
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis ul ,
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis ul li ,
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis ul input {
+	padding: 0;
+	margin: 0;
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis ul li {
+	margin: 5px 0;
+	list-style: none;
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis ul li input {
+	padding: 0 10px;
+	width: 48%;
+	height: 100%;
+	color: #fff;
+	border: none;
+	background: rgba(140, 151, 165, 0.5);
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis ul li span {
+	display: inline-block;
+	width: 52%;
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis .thematic-water-analysis-new input {
+	margin: 5px 0;
+	width: 48%;
+	height: 36px;
+	color: #fff;
+	background: rgb(2,24,55);
+	border: 1px solid rgb(69, 154, 251);
+	border-radius: 4px;
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis .thematic-water-analysis-new input:nth-child(odd) {
+	float:left;
+}
+
+.jimu-widget-ThematicDynamicRiver .thematic-water-analysis .thematic-water-analysis-new input:nth-child(even) {
+	float: right;
+}
