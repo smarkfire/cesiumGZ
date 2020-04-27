@@ -16,88 +16,126 @@ define([
         return declare([BaseWidget], {
             baseClass: 'jimu-widget-Rolling',
             name: 'Rolling',
+            // 天地图
+            imageryProviderAdd: [{
+                "label": "天地图影像",
+                "type": "wmts",
+                "url": "http://t0.tianditu.gov.cn/img_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
+                "layer": "img",
+                "style": "default",
+                "format": "tiles",
+                "tileMatrixSetID": "w",
+                "maximumLevel": 17
+            }, {
+                "label": "天地图影像标注",
+                "type": "wmts",
+                "url": "http://t0.tianditu.gov.cn/cia_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
+                "layer": "cia",
+                "style": "default",
+                "format": "tiles",
+                "tileMatrixSetID": "w",
+                "maximumLevel": 17
+            }],
+            // 赣州地图
+            imageryProviderArrUrl: {
+                "name": "离线影像",
+                "tooltip": "赣州市离线影像",
+                "iconUrl": "images/basemaps/gzyx.png",
+                "layers": [
+                    {
+                        "label": "赣州市离线影像",
+                        "type": "url",
+                        "url": "http://www.sw797.com:801/gzsw3D/v2/data/wp/{z}/{x}/{y}.png"
+                    }
+                ]
+            },
+            earthAtNightLeft: '',
+            earthAtNightRight: '',
+            zjLeft: '',
+            zjRight: '',
             startup: function () {
-                // 赣州地图
-                var imageryProviderArrUrl = {
-                    "name": "离线影像",
-                    "tooltip": "赣州市离线影像",
-                    "iconUrl": "images/basemaps/gzyx.png",
-                    "layers": [
-                        {
-                            "label": "赣州市离线影像",
-                            "type": "url",
-                            "url": "http://www.sw797.com:801/gzsw3D/v2/data/wp/{z}/{x}/{y}.png"
-                        }
-                    ]
-                };
-                // 天地图
-                var imageryProviderArrOneWeb1 = {
-                    "label": "天地图影像",
-                    "type": "wmts",
-                    "url": "http://t0.tianditu.gov.cn/img_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
-                    "layer": "img",
-                    "style": "default",
-                    "format": "tiles",
-                    "tileMatrixSetID": "w",
-                    "maximumLevel": 17
-                };
-                var imageryProviderArrOneWeb2 = {
-                    "label": "天地图影像标注",
-                    "type": "wmts",
-                    "url": "http://t0.tianditu.gov.cn/cia_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
-                    "layer": "cia",
-                    "style": "default",
-                    "format": "tiles",
-                    "tileMatrixSetID": "w",
-                    "maximumLevel": 17
-                }
                 var that = this;
                 // 点击卷帘关闭面板
                 $('.rollinng-table-hezi-xx').click(function () {
+                    that.map.imageryLayers.remove(that.earthAtNightLeft);
+                    that.map.imageryLayers.remove(that.earthAtNightRight);
+                    that.map.imageryLayers.remove(that.zjLeft);
+                    that.map.imageryLayers.remove(that.zjRight);
                     $('.jimu-widget-Rolling').hide();
+                    $('#hezi-selectLeft').val(1);
+                    $('#hezi-selectRight').val(1);
                 });
 
-                $('#hezi-selectOne').on('click', function () {
-                    console.log($('#hezi-selectOne').val());
+                // 加载左边图层
+                $('#hezi-selectLeft').on('change', function () {
+                    // 将滑块的位置与拆分位置同步
+                    var slider = document.getElementById('slider');
+                    that.map.scene.imagerySplitPosition = (slider.offsetLeft - slider.parentElement.offsetWidth) / (slider.parentElement.offsetWidth);
+                    if ($(this).val() == 2) {
+                        // loadMap(that.earthAtNightLeft, that.zjLeft);
+                        loadMapLeft()
+                        that.earthAtNightLeft.splitDirection = Cesium.ImagerySplitDirection.LEFT;
+                        that.zjLeft.splitDirection = Cesium.ImagerySplitDirection.LEFT;
+                    } else {
+                        viewer.imageryLayers.remove(that.earthAtNightLeft);
+                        viewer.imageryLayers.remove(that.zjLeft);
+                    }
                 });
 
-                $('#hezi-selectTwo').on('click', function () {
-                    console.log($('#hezi-selectTwo').val());
+                // 加载右边图层
+                $('#hezi-selectRight').on('change', function () {
+                    // 将滑块的位置与拆分位置同步
+                    var slider = document.getElementById('slider');
+                    that.map.scene.imagerySplitPosition = (slider.offsetLeft - slider.parentElement.offsetWidth) / (slider.parentElement.offsetWidth);
+                    if ($(this).val() == 2) {
+                        // loadMap(that.earthAtNightRight, that.zjRight);
+                        loadMapRight();
+                        that.earthAtNightRight.splitDirection = Cesium.ImagerySplitDirection.RIGHT;
+                        that.zjRight.splitDirection = Cesium.ImagerySplitDirection.RIGHT;
+                    } else {
+                        viewer.imageryLayers.remove(that.earthAtNightRight);
+                        viewer.imageryLayers.remove(that.zjRight);
+                    }
                 });
 
+                // // 加载左边图层方法
+                // function loadMap(mapLeft, mapRight) {
+                //     //imageryLayers获取将在地球上渲染的图像图层的集合
+                //     var layers = viewer.imageryLayers;
+                //     //addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
+                //     mapLeft = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                //         that.imageryProviderAdd[0]
+                //     ));
+                //     mapRight = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                //         that.imageryProviderAdd[1]
+                //     ));
+                // }
 
-                var layers = viewer.imageryLayers;//imageryLayers获取将在地球上渲染的图像图层的集合   UrlTemplateImageryProvider    WebMapTileServiceImageryProvider
-                var earthAtNight = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-                    "label": "天地图影像",
-                    "type": "wmts",
-                    "url": "http://t0.tianditu.gov.cn/img_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
-                    "layer": "img",
-                    "style": "default",
-                    "format": "tiles",
-                    "tileMatrixSetID": "w",
-                    "maximumLevel": 17
-                }));//addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
+                // 加载左边图层方法
+                function loadMapLeft() {
+                    //imageryLayers获取将在地球上渲染的图像图层的集合
+                    var layers = viewer.imageryLayers;
+                    //addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
+                    that.earthAtNightLeft = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                        that.imageryProviderAdd[0]
+                    ));
+                    that.zjLeft = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                        that.imageryProviderAdd[1]
+                    ));
+                }
 
-                var zj = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider({
-                    "label": "天地图影像标注",
-                    "type": "wmts",
-                    "url": "http://t0.tianditu.gov.cn/cia_w/wmts?tk=e9533f5acb2ac470b07f406a4d24b4f0",
-                    "layer": "cia",
-                    "style": "default",
-                    "format": "tiles",
-                    "tileMatrixSetID": "w",
-                    "maximumLevel": 17
-                }));//addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
-
-
-
-
-                earthAtNight.splitDirection = Cesium.ImagerySplitDirection.LEFT; // Only show to the left of the slider.只显示在滑块的左侧
-                // zj.splitDirection = Cesium.ImagerySplitDirection.LEFT; // Only show to the left of the slider.只显示在滑块的左侧
-
-                // Sync the position of the slider with the split position 将滑块的位置与拆分位置同步
-                var slider = document.getElementById('slider');
-                viewer.scene.imagerySplitPosition = ((slider.offsetLeft) / slider.parentElement.offsetWidth);
+                // 加载右边图层方法
+                function loadMapRight() {
+                    //imageryLayers获取将在地球上渲染的图像图层的集合
+                    var layers = viewer.imageryLayers;
+                    //addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
+                    that.earthAtNightRight = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                        that.imageryProviderAdd[0]
+                    ));
+                    that.zjRight = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                        that.imageryProviderAdd[1]
+                    ));
+                }
 
                 var handler = new Cesium.ScreenSpaceEventHandler(slider);
 
@@ -107,9 +145,9 @@ define([
                         return;
                     }
                     var relativeOffset = movement.endPosition.x;
-                    var splitPosition = (slider.offsetLeft + relativeOffset) / slider.parentElement.offsetWidth;
-                    slider.style.left = 100.0 * splitPosition + '%';
-                    viewer.scene.imagerySplitPosition = splitPosition;
+                    // 将滑块的位置与拆分位置同步
+                    viewer.scene.imagerySplitPosition = (slider.offsetLeft + relativeOffset - slider.parentElement.offsetWidth) / (slider.parentElement.offsetWidth);
+                    slider.style.left = 100.0 * + (slider.offsetLeft + relativeOffset) / (slider.parentElement.offsetWidth) + '%';
                 }
 
 

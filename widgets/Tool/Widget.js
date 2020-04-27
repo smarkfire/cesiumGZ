@@ -68,10 +68,11 @@ define([
 				// 卷帘对比
 				$('.rolling-tool').click(function () {
 					$('.jimu-widget-Rolling').show();
+					$('#widgets_Rolling_Widget_17').show();
 					$('.jimu-widget-Measurement').hide();
 					$('.jimu-widget-FlyRoute').hide();
 					$('.jimu-widget-DynamicRiver').hide();
-					$('.tool-y-box').toggle()
+					$('.tool-y-box').toggle();
 				})
 
 			},
