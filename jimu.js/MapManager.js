@@ -13,7 +13,6 @@ define([
     'require',
     './utils',
     'jimu/dijit/Message'
-
 ], function (declare, lang, array, html, query, topic, on, aspect, keys, i18n, dojoConfig,
     require, jimuUtils,
     Message) {
@@ -62,11 +61,11 @@ define([
                 array.forEach(appConfig.map.swzwLayers, function (layerConfig, i) {
                     cb(layerConfig, i);
                 }, this);
-                
+
                 array.forEach(appConfig.map.shLayers, function (layerConfig, i) {
                     cb(layerConfig, i);
                 }, this);
-                
+
                 array.forEach(appConfig.map.djyLayers, function (layerConfig, i) {
                     cb(layerConfig, i);
                 }, this);
@@ -75,7 +74,11 @@ define([
 
 
 
+
+
             _createMap: function (mode, appConfig) {
+                // define(["../libs/Cesium1.68/CesiumNavigation.umd "], function () { });
+
                 Cesium.Ion.defaultAccessToken = appConfig.cesiumToken;
                 //加载底图和地形配置
                 appConfig.map.mapOptions["imageryProviderViewModels"] = this._getImageryProviderArr(appConfig);
@@ -90,14 +93,20 @@ define([
                 var imageryLayers = this.map.imageryLayers;
                 imageryLayers.removeAll();
 
+                // // 罗盘
+                // this.map.extend(Cesium.viewerCesiumNavigationMixin);
+                // //当然也可以使用默认的
+                // // this.map.extend(Cesium.viewerCesiumNavigationMixin, {});
+                // //获取对象
+                // // var cesiumNavigation = this.map.cesiumNavigation;
+                // debugger
+                // CesiumNavigation.umd(this.map);
 
 
-                // 加载图层，由于更换，所以注释掉
-                // this._visitConfigMapLayers(appConfig, lang.hitch(this, function (layerConfig) {
-                //     this.createLayer(map, '3D', layerConfig);
-                // }));
-
-
+                // // 加载图层，由于更换，所以注释掉
+                // // this._visitConfigMapLayers(appConfig, lang.hitch(this, function (layerConfig) {
+                // //     this.createLayer(map, '3D', layerConfig);
+                // // }));
 
 
                 //设置地形
@@ -110,56 +119,51 @@ define([
 
 
                 //设置离线地图默认显示
-        		this.map.baseLayerPicker.viewModel.selectedImagery= this.map.baseLayerPicker.viewModel.imageryProviderViewModels[1];
-        		this.map.baseLayerPicker.viewModel.selectedTerrain= this.map.baseLayerPicker.viewModel.terrainProviderViewModels[2];
-        		$(".cesium-baseLayerPicker-sectionTitle").eq(0).html("底图");
+                this.map.baseLayerPicker.viewModel.selectedImagery = this.map.baseLayerPicker.viewModel.imageryProviderViewModels[1];
+                this.map.baseLayerPicker.viewModel.selectedTerrain = this.map.baseLayerPicker.viewModel.terrainProviderViewModels[2];
+                $(".cesium-baseLayerPicker-sectionTitle").eq(0).html("底图");
                 $(".cesium-baseLayerPicker-sectionTitle").eq(1).html("地形");
-                
+
 
                 //对外暴露的公共接口
                 topic.subscribe("gis/map/setCenter", lang.hitch(this, this.centerAt));
                 //对外暴露的公共接口
                 topic.subscribe("gis/map/flyTo", lang.hitch(this, this.flyTo));
-                
+
                 this._processMapOptions(appConfig.map.mapOptions);
                 this._publishMapEvent(this.map);
-
-
             },
 
 
 
 
-
-
-
-            _getImageryProviderArr:function(mapconfig){
-            	var imageryProviderArr = [];
+            _getImageryProviderArr: function (mapconfig) {
+                var imageryProviderArr = [];
                 var imageryProviderViewModels = mapconfig.map.imageryProviderViewModels;
                 for (var i = 0; i < imageryProviderViewModels.length; i++) {
-                	
-                	let layerArr = [];
-					for (var j = 0; j < imageryProviderViewModels[i].layers.length; j++) {
-						let layerConfig = imageryProviderViewModels[i].layers[j];
-						let layer;
-						if(layerConfig.type=="url"){
-							layer = new Cesium.UrlTemplateImageryProvider(layerConfig);
-						}
-						else if(layerConfig.type=="wmts"){
-							layer = new Cesium.WebMapTileServiceImageryProvider(layerConfig);
-						}
-						layerArr.push(layer);
-					}
-					
-                	var pvm = new Cesium.ProviderViewModel({
-						name: imageryProviderViewModels[i].name,
-						tooltip: imageryProviderViewModels[i].tooltip,
-						iconUrl: imageryProviderViewModels[i].iconUrl,
-						creationFunction: function() {
-							return layerArr;
-						}
-					});
-					imageryProviderArr.push(pvm);
+
+                    let layerArr = [];
+                    for (var j = 0; j < imageryProviderViewModels[i].layers.length; j++) {
+                        let layerConfig = imageryProviderViewModels[i].layers[j];
+                        let layer;
+                        if (layerConfig.type == "url") {
+                            layer = new Cesium.UrlTemplateImageryProvider(layerConfig);
+                        }
+                        else if (layerConfig.type == "wmts") {
+                            layer = new Cesium.WebMapTileServiceImageryProvider(layerConfig);
+                        }
+                        layerArr.push(layer);
+                    }
+
+                    var pvm = new Cesium.ProviderViewModel({
+                        name: imageryProviderViewModels[i].name,
+                        tooltip: imageryProviderViewModels[i].tooltip,
+                        iconUrl: imageryProviderViewModels[i].iconUrl,
+                        creationFunction: function () {
+                            return layerArr;
+                        }
+                    });
+                    imageryProviderArr.push(pvm);
                 }
                 return imageryProviderArr;
             },
@@ -167,63 +171,61 @@ define([
 
 
 
+            _getTerrainProviderViewModelsArr: function (mapconfig) {
+                var terrainProviderViewModelsArr = [new Cesium.ProviderViewModel({
+                    name: "无地形",
+                    tooltip: "WGS84标准球体",
+                    iconUrl: "images/basemaps/TerrainEllipsoid.png",
+                    creationFunction: function () {
+                        return new Cesium.EllipsoidTerrainProvider({
+                            ellipsoid: Cesium.Ellipsoid.WGS84
+                        })
+                    }
+                }), new Cesium.ProviderViewModel({
+                    name: "全球地形",
+                    tooltip: "由 Cesium官方 提供的高分辨率全球地形",
+                    iconUrl: "images/basemaps/TerrainSTK.png",
+                    creationFunction: function () {
+                        return new Cesium.CesiumTerrainProvider({
+                            url: Cesium.IonResource.fromAssetId(1),
+                            requestWaterMask: !0,
+                            requestVertexNormals: !0
+                        })
+                    }
+                }), new Cesium.ProviderViewModel({
+                    name: "赣州地形",
+                    tooltip: "由 普适科技 提供的赣州地区地形",
+                    iconUrl: "images/basemaps/TerrainSTK.png",
+                    creationFunction: function () {
+                        return new Cesium.CesiumTerrainProvider({
+                            url: "http://www.sw797.com:801/gzsw3D/v2/data/gzdx",
+                            requestWaterMask: !0,
+                            requestVertexNormals: !0
+                        })
+                    }
+                })];
+                //          	var terrainProviderViewModels = mapconfig.map.terrainProviderViewModels;
+                //              for (var i = 0; i < terrainProviderViewModels.length; i++) {
+                //              	var tp = null;
+                //              	if(terrainProviderViewModels[i].url==""){
+                //						tp = new Cesium.EllipsoidTerrainProvider({
+                //							ellipsoid: Cesium.Ellipsoid.WGS84
+                //						})
+                //					}
+                //					else{
+                //						tp = new Cesium.CesiumTerrainProvider({url:terrainProviderViewModels[i].url,requestVertexNormals:true});
+                //					}
+                //              	var pvm = new Cesium.ProviderViewModel({
+                //						name: terrainProviderViewModels[i].name,
+                //						tooltip: terrainProviderViewModels[i].tooltip,
+                //						iconUrl: terrainProviderViewModels[i].iconUrl,
+                //						creationFunction: function() {
+                //							return tp;
+                //						}
+                //					});
+                //					terrainProviderViewModelsArr.push(pvm);
+                //              }
 
-
-            _getTerrainProviderViewModelsArr:function(mapconfig){
-            	var terrainProviderViewModelsArr = [new Cesium.ProviderViewModel({
-						name: "无地形",
-						tooltip: "WGS84标准球体",
-						iconUrl: "images/basemaps/TerrainEllipsoid.png",
-						creationFunction: function() {
-							return new Cesium.EllipsoidTerrainProvider({
-								ellipsoid: Cesium.Ellipsoid.WGS84
-							})
-						}
-					}), new Cesium.ProviderViewModel({
-						name: "全球地形",
-						tooltip: "由 Cesium官方 提供的高分辨率全球地形",
-						iconUrl: "images/basemaps/TerrainSTK.png",
-						creationFunction: function() {
-							return new Cesium.CesiumTerrainProvider({
-								url: Cesium.IonResource.fromAssetId(1),
-								requestWaterMask: !0,
-								requestVertexNormals: !0
-							})
-						}
-					}), new Cesium.ProviderViewModel({
-						name: "赣州地形",
-						tooltip: "由 普适科技 提供的赣州地区地形",
-						iconUrl: "images/basemaps/TerrainSTK.png",
-						creationFunction: function() {
-							return new Cesium.CesiumTerrainProvider({
-								url: "http://www.sw797.com:801/gzsw3D/v2/data/gzdx",
-								requestWaterMask: !0,
-								requestVertexNormals: !0
-							})
-						}
-					})];
-//          	var terrainProviderViewModels = mapconfig.map.terrainProviderViewModels;
-//              for (var i = 0; i < terrainProviderViewModels.length; i++) {
-//              	var tp = null;
-//              	if(terrainProviderViewModels[i].url==""){
-//						tp = new Cesium.EllipsoidTerrainProvider({
-//							ellipsoid: Cesium.Ellipsoid.WGS84
-//						})
-//					}
-//					else{
-//						tp = new Cesium.CesiumTerrainProvider({url:terrainProviderViewModels[i].url,requestVertexNormals:true});
-//					}
-//              	var pvm = new Cesium.ProviderViewModel({
-//						name: terrainProviderViewModels[i].name,
-//						tooltip: terrainProviderViewModels[i].tooltip,
-//						iconUrl: terrainProviderViewModels[i].iconUrl,
-//						creationFunction: function() {
-//							return tp;
-//						}
-//					});
-//					terrainProviderViewModelsArr.push(pvm);
-//              }
-				
                 return terrainProviderViewModelsArr;
             },
 
@@ -316,10 +318,9 @@ define([
                     //修改全局的homebutton定位
                     Cesium.Camera.DEFAULT_VIEW_RECTANGLE = Cesium.Rectangle.fromDegrees(west, south, east, north);
                     Cesium.Camera.DEFAULT_VIEW_FACTOR = 0;
-
                 }
-               
             },
+
             onBeforeUnload: function () {
 
             },
@@ -348,6 +349,8 @@ define([
             },
 
         });
+
+
 
     clazz.getInstance = function (options, mapDivId) {
         if (instance === null) {

@@ -3,16 +3,16 @@
 // 模块描述:显示坐标
 ///////////////////////////////////////////////////////////////////////////
 define([
-		'dojo/_base/declare',
-		'dojo/_base/lang',
-		'dojo/_base/array',
-		'dojo/_base/html',
-		'dojo/topic',
-		'jimu/BaseWidget',
-		'jimu/utils',
-		'jimu/css!libs/zTree_v3/css/zTreeStyle/zTreeStyle.css',
-		'libs/zTree_v3/js/jquery.ztree.all'
-	],
+	'dojo/_base/declare',
+	'dojo/_base/lang',
+	'dojo/_base/array',
+	'dojo/_base/html',
+	'dojo/topic',
+	'jimu/BaseWidget',
+	'jimu/utils',
+	'jimu/css!libs/zTree_v3/css/zTreeStyle/zTreeStyle.css',
+	'libs/zTree_v3/js/jquery.ztree.all'
+],
 	function (declare,
 		lang,
 		array,
@@ -26,7 +26,7 @@ define([
 		return declare([BaseWidget], {
 			baseClass: 'jimu-widget-Tool',
 			name: 'Tool',
-			layers:{},
+			layers: {},
 			startup: function () {
 				// 暴露在外的接口
 				topic.subscribe("closeTool", lang.hitch(this, this.closeToolBox));
@@ -45,7 +45,7 @@ define([
 					$('.jimu-widget-Measurement').hide();
 					$('.tool-y-box').toggle()
 				})
-				
+
 				// 图上量算
 				$('.measure-tool').click(function () {
 					$('.jimu-widget-Measurement').show();
@@ -67,6 +67,7 @@ define([
 
 				// 卷帘对比
 				$('.rolling-tool').click(function () {
+					topic.publish('openRolling', 'Rolling');
 					$('.jimu-widget-Rolling').show();
 					$('#widgets_Rolling_Widget_17').show();
 					$('.jimu-widget-Measurement').hide();
@@ -74,7 +75,6 @@ define([
 					$('.jimu-widget-DynamicRiver').hide();
 					$('.tool-y-box').toggle();
 				})
-
 			},
 
 			closeToolBox: function (item) {

@@ -1,0 +1,45 @@
+{
+  "_from": "cesium-navigation",
+  "_id": "cesium-navigation@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-X/R77+H9ifh0g8wv9wE+YE6ZILE=",
+  "_location": "/cesium-navigation",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cesium-navigation",
+    "name": "cesium-navigation",
+    "escapedName": "cesium-navigation",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/cesium-navigation/download/cesium-navigation-1.0.0.tgz",
+  "_shasum": "5ff47befe1fd89f87483cc2ff7013e604e9920b1",
+  "_spec": "cesium-navigation",
+  "_where": "D:\\文档\\普适\\cesium项目\\ceShiDemo\\Navigation",
+  "author": {
+    "name": "solocao",
+    "email": "solocao@126.com"
+  },
+  "bugs": {
+    "url": "https://github.com/solocao/cesium-navigation/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "cesium导航模块",
+  "homepage": "https://github.com/solocao/cesium-navigation#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cesium-navigation",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solocao/cesium-navigation.git"
+  },
+  "version": "1.0.0"
+}

@@ -16,6 +16,7 @@ define([
         return declare([BaseWidget], {
             baseClass: 'jimu-widget-Rolling',
             name: 'Rolling',
+            flag: false,
             // 天地图
             imageryProviderAdd: [{
                 "label": "天地图影像",
@@ -54,6 +55,7 @@ define([
             zjLeft: '',
             zjRight: '',
             startup: function () {
+                topic.subscribe("openRolling", lang.hitch(this, this.openRolling));
                 var that = this;
                 // 点击卷帘关闭面板
                 $('.rollinng-table-hezi-xx').click(function () {
@@ -62,7 +64,7 @@ define([
                     that.map.imageryLayers.remove(that.zjLeft);
                     that.map.imageryLayers.remove(that.zjRight);
                     $('.jimu-widget-Rolling').hide();
-                    $('#hezi-selectLeft').val(1);
+                    $('#hezi-selectLeft').val(2);
                     $('#hezi-selectRight').val(1);
                 });
 
@@ -98,14 +100,16 @@ define([
                     }
                 });
 
-                // // 加载左边图层方法
+                // 加载图层方法
                 // function loadMap(mapLeft, mapRight) {
                 //     //imageryLayers获取将在地球上渲染的图像图层的集合
                 //     var layers = viewer.imageryLayers;
                 //     //addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
+                //     console.log(layers)
                 //     mapLeft = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
                 //         that.imageryProviderAdd[0]
                 //     ));
+                //     console.log(mapLeft)
                 //     mapRight = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
                 //         that.imageryProviderAdd[1]
                 //     ));
@@ -169,8 +173,33 @@ define([
                 }, Cesium.ScreenSpaceEventType.PINCH_END);//触摸表面上的双指事件的结束
             },
 
-            onOpen: function () {
+            openRolling: function (item) {
+                if (item == this.name) {
+                    this.flag = true;
+                    this.onOpen()
+                }
+            },
 
+            onOpen: function () {
+                var that = this;
+                if (this.flag != true) return;
+                var slider = document.getElementById('slider');
+                that.map.scene.imagerySplitPosition = (slider.offsetLeft - slider.parentElement.offsetWidth) / (slider.parentElement.offsetWidth);
+                loadMapLeft();
+                that.earthAtNightLeft.splitDirection = Cesium.ImagerySplitDirection.LEFT;
+                that.zjLeft.splitDirection = Cesium.ImagerySplitDirection.LEFT;
+
+                function loadMapLeft() {
+                    //imageryLayers获取将在地球上渲染的图像图层的集合
+                    var layers = that.map.imageryLayers;
+                    //addImageryProvider使用给定的ImageryProvider创建一个新层，并将其添加到集合中
+                    that.earthAtNightLeft = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                        that.imageryProviderAdd[0]
+                    ));
+                    that.zjLeft = layers.addImageryProvider(new Cesium.WebMapTileServiceImageryProvider(
+                        that.imageryProviderAdd[1]
+                    ));
+                }
             },
 
             onClose: function () {
