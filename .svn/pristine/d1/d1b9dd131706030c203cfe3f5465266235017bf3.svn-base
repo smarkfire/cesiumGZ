@@ -1,6 +1,0 @@
-<div>
-    <a class="fa fa-area-chart" style="    padding: 4px;
-    cursor: pointer;
-    font-size: 19px;
-    color: white;" title="获取剖面图" data-dojo-attach-event="click:click"></a>
-</div>

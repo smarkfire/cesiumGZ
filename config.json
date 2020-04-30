@@ -212,6 +212,17 @@
         }
       },
       {
+        "name": "坐标定位",
+        "uri": "widgets/CoorPosition/Widget",
+        "position": {
+          "right": 10,
+          "top": 96,
+          "width": "217px",
+          "height": "180px",
+          "relativeTo": "map"
+        }
+      },
+      {
         "name": "山洪预警",
         "uri": "widgets/MountainFloodWarning/Widget",
         "position": {

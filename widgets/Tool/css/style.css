@@ -94,6 +94,10 @@
   background: url(../../../images/toolbox.png ) no-repeat 0 -110px;
 }
 
+.jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(5) i {
+  background: url(../../../images/toolbox.png ) no-repeat 0 -32px;
+}
+
 
 
 /* .jimu-widget-Tool .tool-bar .tool-y-box li:nth-child(2) i {

@@ -1,0 +1,128 @@
+.jimu-widget-CoorPosition{
+  background-color: #36403d;
+  font-size: 14px;
+  border: 1px solid rgb(69, 154, 251);
+  color: rgb(238, 235, 235);
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  display: none;
+  box-sizing: border-box;
+}
+
+.CoorPosition-zbdw {
+  position: relative;
+  width: 100%;
+  height: 33px;
+  border-bottom: 1px solid rgb(69, 154, 251);
+  padding: 0 25px;
+  cursor: move;
+}
+
+.CoorPosition-zbdw-pic {
+  position: absolute;
+  left: 6px;
+  top: 9px;
+  width: 15px;
+  height: 13px;
+  background: url(../../../images/toolbox.png ) no-repeat 0 -32px;
+}
+
+.CoorPosition-zbdw-zbdw {
+  width: 100%;
+  line-height: 33px;
+  font-size: 14px;
+}
+
+.CoorPosition-zbdw-x {
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  width: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.CoorPosition-input {
+  width: 100%;
+  /* background-color: blue; */
+  padding: 8px 5px;
+  font-size: 14px;
+}
+
+.CoorPosition-input-JD {
+  position: relative;
+  width: 100%;
+  height: 28px;
+  background-color: #3a464c;
+  margin-bottom: 3px;
+  text-align: center;
+}
+
+.jingDu {
+  line-height: 28px;
+}
+
+.jingDu-input {
+  display: inline-block;
+  background-color: #3a464c;
+  border: none;
+  text-indent: 2em;
+  caret-color:#fff;
+  color: #fff;
+}
+
+.queDing {
+  background-color: #244959;
+  border: none;
+  color: #fff;
+  margin-left: 160px;
+  padding: 5px;
+}
+
+.jiantou {
+  position: absolute;
+  top: 4px;
+  right: 15px;
+  width: 15px;
+  height: 20px;
+  background-color: #fff;
+  z-index: 999;
+  display: none;
+}
+
+.span-jiantou {
+  position: absolute;
+  top: -3px;
+  right: 14px;
+  width: 19px;
+  height: 19px;
+  color: #666;
+  cursor: pointer;
+}
+
+.twojiantou {
+  top: 5px;
+}
+
+.leftjiantou {
+  position: absolute;
+  right: -16px;
+  width: 19px;
+  height: 19px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

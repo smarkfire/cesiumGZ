@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.port": 8082
+    "liveServer.settings.port": 8082,
+    "git.ignoreLimitWarning": true
 }

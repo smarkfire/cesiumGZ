@@ -75,6 +75,16 @@ define([
 					$('.jimu-widget-DynamicRiver').hide();
 					$('.tool-y-box').toggle();
 				})
+
+				// 坐标定位
+				$('.CoorPosition-tool').click(function () {
+					$('.jimu-widget-CoorPosition').show();
+					$('.jimu-widget-Measurement').hide();
+					$('.jimu-widget-Sign').hide();
+					$('.jimu-widget-FlyRoute').hide();
+					$('.jimu-widget-DynamicRiver').hide();
+					$('.tool-y-box').toggle()
+				})
 			},
 
 			closeToolBox: function (item) {
